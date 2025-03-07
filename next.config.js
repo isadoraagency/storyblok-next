@@ -8,6 +8,13 @@ const nextConfig = {
     };
     return config;
   },
+  reactStrictMode: true,
+  experimental: {
+    appDir: true,
+  },
+  images: {
+    remotePatterns: [{ hostname: 'a-us.storyblok.com' }],
+  },
 };
 
 module.exports = nextConfig;
