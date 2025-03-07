@@ -1,7 +1,8 @@
 import {StoryblokStory} from "@storyblok/react/rsc";
 import { fetchStory } from '@/lib/storyblokApi';
-
-export default async function Home({ params }) {
+import PageContent from "../../components/PageContent";
+export const revalidate = 60;
+export default async function Page({ params }) {
   const { slug } = await params;
   const {data} = await fetchStory(slug);
 
@@ -10,7 +11,7 @@ export default async function Home({ params }) {
   }
   // console.log(bridgeOptions)
 
-  return  <StoryblokStory story={data.story}  />;
+  return   <PageContent blok={data.story.content} story={data.story} />;
 }
 
 

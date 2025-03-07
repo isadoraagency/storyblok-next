@@ -1,11 +1,11 @@
-
+'use client'
 import {renderRichText, storyblokEditable} from "@storyblok/react";
 import Link from "next/link";
-// import Breadcrumbs from "./Breadcrumbs";
-// import ReactPlayer from "react-player";
+import Breadcrumbs from "./Breadcrumbs";
+import ReactPlayer from "react-player";
 
 
-const Hero = ({blok, index=1}) => {
+const Hero = ({blok, story, index=1}) => {
   let btnUrl = "", btnTitle= "";
   if( blok.button.linktype == 'email'){
     btnUrl = 'mailto:'+blok.button.url;
@@ -29,7 +29,8 @@ const Hero = ({blok, index=1}) => {
         <div className={`ia-container  ${blok.hero_type != 'text' ? 'd-flex' : ''}`}>
           {blok.hero_type !== 'text' ? (
             <div className="hero-flexible__left">
-              {/*{blok.show_breadcrumbs && <Breadcrumbs fullSlug={story.full_slug} />}*/}
+
+              {blok.show_breadcrumbs && <Breadcrumbs fullSlug={story.full_slug} />}
               {blok.Title && <h1 className="text--white">{blok.Title} </h1>}
               {blok.description && (
                 <div
@@ -51,7 +52,7 @@ const Hero = ({blok, index=1}) => {
             </div>
           ) : (
             <>
-              {/*{blok.show_breadcrumbs && <Breadcrumbs fullSlug={story.full_slug} />}*/}
+              {blok.show_breadcrumbs && <Breadcrumbs fullSlug={story.full_slug} />}
               {blok.Title && <h1 className="text--white">{blok.Title}</h1>}
 
               {blok.description && (
@@ -147,19 +148,19 @@ const Hero = ({blok, index=1}) => {
                     </svg>
                     <div className="hero-flexible__right-in">
                       <div className="testimonial__video">
-                        { blok.video.filename &&
+                        { blok?.video &&
                           (
                             <>
                               <a href="#" className="icon-mute"><span className="hidden">Sound</span> <em><i
                                 className="icon-sound-on"></i></em></a>
-                              {/*<ReactPlayer url={blok.video.filename}></ReactPlayer>*/}
+                               <ReactPlayer url={blok.video.filename}></ReactPlayer>
                               <a href="#" className="ia-btn ia-btn__media" data-reverse="Pause"><span>Play</span>
                                 <em><i className="icon-play"></i></em></a>
                             </>
                           )
                         }
                         {
-                          blok.video_placeholder.filename &&
+                          blok?.video_placeholder &&
                           <div className={`video-placeholder ${ !blok.video.filename && 'no-video'}`}
                                style={{backgroundImage:  `url(${blok.video_placeholder.filename})` }}></div>
                         }
