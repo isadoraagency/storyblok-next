@@ -37,3 +37,6 @@ localhost.pem
 .vercel
 
 .idea
+
+# export components
+/export
