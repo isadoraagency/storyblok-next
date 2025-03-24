@@ -1,7 +1,7 @@
 'use client'
 import MainNavigation from "./MainNavigation";
 import {useEffect, useState} from "react";
-import {initWow} from "../../lib/initWow";
+// import {initWow} from "../../lib/initWow";
 
 export default function Header({data}) {
 
@@ -9,10 +9,10 @@ export default function Header({data}) {
   const toggleMenu = ()=>{
     setMenuOpen(!menuOpen);
   }
-
-  useEffect(() => {
-      initWow();
-  }, []);
+  //
+  // useEffect(() => {
+  //     initWow();
+  // }, []);
 
 
   useEffect(() => {

@@ -2,30 +2,21 @@
 import {fetchStoriesByUUID} from "../../lib/storyblokApi";
 import Link from "next/link";
 import {Fragment, useEffect, useState} from "react";
-import {initWow} from "../../lib/initWow";
 
 
 export default  function InsightList({title, list}){
-
   const [insights, setInsights] = useState([]);
   useEffect(() => {
 
     async function fetchInsights() {
       const res = await fetchStoriesByUUID(list);
       setInsights(res);
-
-
     }
     if(list) fetchInsights();
 
 
   }, [list])
 
-  useEffect(() => {
-    if (insights.length > 0) {
-      initWow();
-    }
-  }, [insights]);
   if(insights === 0 ) return null;
 
   return (

@@ -10,7 +10,14 @@ const Footer = ({ data }) => {
   let year = new Date().getFullYear();
   const footer = data.story.content;
   useEffect(() => {
-    initWow();
+    if (typeof window !== "undefined") {
+      if (!window.wowInitialized) {
+        initWow();
+        window.wowInitialized = true;
+      } else if (window.WOW) {
+        new window.WOW().sync();
+      }
+    }
   }, []);
 
   if(!footer){
