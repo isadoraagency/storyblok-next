@@ -1,0 +1,39 @@
+/*Hero section*/
+.small-header {
+  padding: 16rem 0 10rem;
+  color: #fff;
+  text-align: center;
+  font-family: $rd;
+  font-size: 7rem;
+  line-height: 7.9rem;
+  h1 {
+    font-weight: normal;
+    opacity: 0;
+    transform: translate(0,5rem);
+    transition: transform .5s ease-in, opacity .5s ease-in;
+  }
+}
+.page-template-flexible-page {
+  .small-header {
+    margin-bottom: 6rem;
+  }
+  .work-video {
+    margin-bottom: 6rem;
+  }
+}
+@media screen and ( max-width: 767px ) {
+  .small-header {
+    font-size: 5.2rem;
+    line-height: normal;
+    h1 {
+      br {
+        display: none;
+      }
+    }
+  }
+  .page-template-flexible-page {
+    .small-header {
+      margin-bottom: 4rem;
+    }
+  }
+}

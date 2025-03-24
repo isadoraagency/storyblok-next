@@ -1,0 +1,49 @@
+.ui_components {
+  .section__block {
+    padding: 4rem 0;
+    .label {
+      border-bottom: 1px solid $purple-2;
+      padding-bottom: 3rem;
+      margin-bottom: 3rem;
+      &.ia-white {
+        border-color: $white;
+      }
+    }
+  }
+  .colors {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+    > div {
+      width: calc(20% - 1.2rem);
+      margin: 0 1.5rem 20px 0;
+      &:nth-child(5n + 5){
+        margin-right: 0;
+      }
+      span {
+        width: 100%;
+        display: block;
+        padding-bottom: 50%;
+        background: #000;
+        box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+        margin-bottom: 1rem;
+      }
+    }
+  }
+  ul {
+    list-style-type: none;
+    margin: 0
+  }
+  .align-columns {
+    display: flex;
+    flex-wrap: wrap;
+    > div {
+      width: 33.33%;
+    }
+  }
+  .btn,
+  .ia-link {
+    margin-right: 3rem;
+  }
+}

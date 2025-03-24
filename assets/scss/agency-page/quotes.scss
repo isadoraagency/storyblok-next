@@ -1,0 +1,130 @@
+.quotes {
+  position: absolute;
+  left: -6px;
+  z-index: -1;
+  top: -100px;
+  img {
+    position: absolute;
+    left: 0;
+    right: 0;
+    max-width: none;
+    width: auto;
+    height: auto;
+    bottom: 0;
+    top: 0;
+    opacity: 0;
+    vertical-align: top;
+  }
+  img.show {
+
+    opacity: 1;
+  }
+  img.active {
+    position: static;
+    opacity: 1;
+  }
+  img.hide {
+    visibility: hidden;
+  }
+}
+.quotes.new-quotes {
+  left: -355px;
+  top: -174px;
+}
+.work-quote-inner {
+  .quotes.new-quotes {
+    left: -370px;
+  }
+}
+.power-services {
+  .quotes {
+    left: 25px;
+    top: -97px;
+  }
+}
+.work-description .quotes {
+  top: -110px;
+}
+.work-description .quotes.new-quotes {
+  top: -180px;
+}
+@media screen and ( max-width: 1150px ) {
+  .work-description .quotes.new-quotes {
+    top: -162px;
+    left: -340px;
+
+    transform: scale(.9);
+
+    transform-origin: 0 0;
+  }
+  .pullquote .quotes {
+    top: -103px;
+  }
+}
+@media screen and ( max-width: 1023px ) {
+  .work-description .quotes {
+    top: -66px;
+
+    transform: scale(.6);
+
+    transform-origin: 0 0;
+  }
+}
+@media screen and ( max-width: 767px ) {
+  .work-quote-inner .quotes.new-quotes {
+    left: -335px;
+  }
+  .quotes img {
+    display: none !important;
+    &:last-child {
+      display: block !important;
+    }
+  }
+}
+@media screen and ( max-width: 640px ) {
+  .quotes.new-quotes {
+    top: -160px;
+    left: -341px;
+
+    transform: scale(.9);
+
+    transform-origin: 0 0;
+  }
+  .pullquote .quotes {
+    top: -78px;
+    left: 9px;
+
+    transform: scale(.75);
+
+    transform-origin: 0 0;
+  }
+  .pullquote .quotes {
+    left: -6px;
+    top: -70px;
+  }
+}
+@media screen and (max-height: 520px), screen and ( max-width: 640px ) {
+  .work-description .quotes {
+    display: none;
+  }
+}
+@media screen and ( max-width: 480px ) {
+  .pullquote .quotes {
+    top: -61px;
+
+    transform: scale(.6);
+  }
+  .pullquote .quotes {
+    top: -50px;
+  }
+}
+@media screen and ( max-width: 374px ) {
+  .quotes.new-quotes {
+    top: -108px;
+    left: -60px;
+
+    transform: scale(.9);
+
+    transform-origin: 0 0;
+  }
+}

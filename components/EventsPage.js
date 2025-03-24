@@ -1,3 +1,4 @@
+'use client'
 import React, { useState } from "react";
 import { useEvents } from "../hooks/useEvents";
 import EventItem from "./EventItem";

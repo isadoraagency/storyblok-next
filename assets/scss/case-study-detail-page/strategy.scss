@@ -1,0 +1,629 @@
+/* Strategy */
+/* NCCER START */
+.section-2018.strategy {
+  .inner {
+    position: relative;
+  }
+  .inner--margintop {
+    margin-top: 100px;
+  }
+
+  .left-image {
+    float: left;
+    margin-right: -200px;
+    max-width: 57.1%;
+    position: relative;
+    z-index: 3;
+    // box-shadow: 0 0 2rem rgba(0,0,0,0.2);
+    &--full {
+      float: none;
+      max-width: 100%;
+      margin-right: 0;
+    }
+  }
+  .left-image.m-l {
+    float: right;
+    margin-right: 0;
+    margin-left: -200px;
+  }
+  .right-image {
+    float: right;
+    margin-left: -200px;
+    max-width: 57.1%;
+    position: relative;
+    z-index: 2;
+    margin-top: 10.1%;
+    // box-shadow: 0 0 2rem rgba(0,0,0,0.2);
+  }
+  .right-image.m-l {
+    float: left;
+    margin-left: 0;
+    margin-right: -200px;
+  }
+  .center-image {
+    position: absolute;
+    left: 7.5%;
+    top: -2rem;
+    // box-shadow: 0 0 2rem rgba(0,0,0,0.2);
+  }
+  .bottom-image__block {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    &.full-width {
+      width: 100vw;
+      position: relative;
+      left: 50%;
+      transform: translate(-50%, 0);
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+  .bottom-image {
+    float: left;
+    width: auto;
+    position: relative;
+    z-index: 1;
+    // box-shadow: 0 0 2rem rgba(0,0,0,0.2);
+  }
+}
+//.postid-8615 {
+//  .section-2018.strategy {
+//    .left-image {
+//      margin-top: 150px;
+//    }
+//    .right-image {
+//      margin-top: 16%;
+//    }
+//  }
+//}
+//.postid-8594 {
+//  .section-2018.strategy {
+//    .left-image {
+//      margin-top: 60px;
+//    }
+//    .right-image {
+//      margin-top: 15.1%;
+//      margin-bottom: 0;
+//    }
+//    .bottom-image {
+//      margin-top: -145px;
+//    }
+//  }
+//}
+//.postid-9028 {
+//  .section-2018.strategy {
+//    .left-image {
+//      max-width: 48.1%;
+//    }
+//    .right-image {
+//      z-index: 3;
+//    }
+//  }
+//}
+//.postid-8468 {
+//  .section-2018.strategy {
+//    .bottom-image {
+//      height: auto;
+//      width: auto;
+//      max-width: 100%;
+//      top: -224px;
+//      margin: 0 auto -224px;
+//      float: none;
+//      display: block;
+//    }
+//    .left-image {
+//      margin-top: 16rem;
+//      margin-bottom: 17rem;
+//    }
+//    .right-image {
+//      padding-top: 7.5%;
+//    }
+//  }
+//  .inspiration {
+//    + {
+//      .section-2018.strategy {
+//        .left-image {
+//          margin-top: 6rem;
+//          max-width: 62%;
+//          margin-bottom: 30rem;
+//        }
+//        .right-image {
+//          padding-top: 18%;
+//        }
+//      }
+//    }
+//  }
+//}
+//.postid-2612 {
+//  .section-2018.strategy {
+//    .bottom-image {
+//      float: none;
+//      height: auto;
+//      clear: both;
+//      max-width: 1100px;
+//      margin: 0 auto -33rem;
+//      top: -33rem;
+//      left: 3%;
+//      padding-top: 39.5%;
+//    }
+//    .right-image {
+//      margin-top: 9.1%;
+//      padding-top: 0;
+//      box-shadow: 0 0 1.5rem rgba(0,0,0,0.1);
+//    }
+//  }
+//}
+//.postid-6880 {
+//  .section-2018.strategy {
+//    .bottom-image {
+//      float: none;
+//      height: auto;
+//      clear: both;
+//      max-width: 1100px;
+//      margin: 0 auto -33rem;
+//      top: -33rem;
+//      left: 3%;
+//      padding-top: 39.5%;
+//      margin: 0 auto -40rem;
+//      top: -44rem;
+//    }
+//  }
+//}
+//.postid-5030 {
+//  .section-2018.strategy {
+//    .bottom-image {
+//      float: none;
+//      height: auto;
+//      clear: both;
+//      max-width: 1100px;
+//      margin: 0 auto -33rem;
+//      top: -33rem;
+//      left: 3%;
+//      padding-top: 39.5%;
+//      margin: 0 auto -16rem;
+//      top: -20rem;
+//    }
+//    .right-image {
+//      padding-top: 7%;
+//    }
+//  }
+//}
+//.postid-6912 {
+//  .section-2018.strategy {
+//    .bottom-image {
+//      float: none;
+//      height: auto;
+//      clear: both;
+//      max-width: 1100px;
+//      margin: 0 auto -33rem;
+//      top: -33rem;
+//      left: 3%;
+//      padding-top: 39.5%;
+//      padding-top: 57.5%;
+//      margin: 0 auto -23rem;
+//      top: -27rem;
+//    }
+//    .right-image {
+//      padding-top: 4%;
+//    }
+//  }
+//}
+//.postid-2717 {
+//  .section-2018.strategy {
+//    .right-image {
+//      padding-top: 31%;
+//    }
+//  }
+//}
+//.postid-69 {
+//  .section-2018.strategy {
+//    .right-image {
+//      padding-top: 27.5%;
+//    }
+//  }
+//}
+//.postid-8927 {
+//  .section-2018.strategy {
+//    .right-image {
+//      margin-right: 30px;
+//      z-index: 3;
+//    }
+//  }
+//}
+//.postid-8869 {
+//  .section-2018.strategy.cleared {
+//    padding-top: 120px;
+//  }
+//  .section-2018.strategy {
+//    .left-image {
+//      margin-top: 15%;
+//      box-shadow: none;
+//      max-width: 85.1%;
+//    }
+//    .right-image {
+//      margin-top: 0;
+//      position: absolute;
+//      right: 0;
+//      max-width: 60%;
+//    }
+//    .bottom-image {
+//      margin-top: 15px;
+//      z-index: 3;
+//      height: 100%;
+//      margin-bottom: 50px;
+//    }
+//  }
+//}
+//.postid-3806 {
+//  .strategy {
+//    padding-top: 8rem;
+//  }
+//}
+//.postid-9699 {
+//  .section-2018.strategy {
+//    .left-image {
+//      float: none;
+//      margin: 0 auto 6rem;
+//      max-width: 100%;
+//      box-shadow: none;
+//      padding: 0 2rem;
+//      box-sizing: border-box;
+//    }
+//    .bottom-image__block {
+//      margin: 8rem 0;
+//      position: relative;
+//      overflow: hidden;
+//      height: 78.1rem;
+//      margin-bottom: 0;
+//      img {
+//        box-shadow: none;
+//      }
+//    }
+//    .bottom-image {
+//      margin-top: 0;
+//      min-width: 100%;
+//      min-height: 100%;
+//      position: absolute;
+//      top: 50%;
+//      left: 50%;
+//      transform: translate(-50%,-50%);
+//      height: auto;
+//    }
+//    + {
+//      .section-2018.strategy {
+//        .bottom-image__block {
+//          margin-bottom: 8rem;
+//          margin-top: 3rem;
+//        }
+//      }
+//    }
+//  }
+//}
+//.postid-9737 {
+//  .section-2018.strategy {
+//    .mission-entry {
+//      margin-bottom: 7.4rem;
+//      ul {
+//        margin-left: 3rem;
+//      }
+//    }
+//    .left-image {
+//      max-width: 46.1%;
+//    }
+//    .right-image {
+//      max-width: 67.1%;
+//      margin-top: 6.1%;
+//    }
+//  }
+//
+//  .responsive-parallax {
+//    + {
+//      .strategy {
+//        padding-bottom: 0;
+//      }
+//    }
+//  }
+//  .section-2018.animation {
+//    + {
+//      .strategy {
+//        padding-top: 8rem;
+//        padding-bottom: 0;
+//      }
+//      .section-2018.strategy {
+//        .mission-entry {
+//          margin-bottom: 0;
+//        }
+//      }
+//    }
+//  }
+//}
+@media screen and ( max-width: 1600px ) {
+  //.postid-9699 {
+  //  .section-2018.strategy {
+  //    .bottom-image__block {
+  //      height: auto;
+  //    }
+  //    .bottom-image {
+  //      margin-top: 0;
+  //      min-width: 1px;
+  //      min-height: 1px;
+  //      position: static;
+  //      transform: translate(0,0);
+  //    }
+  //  }
+  //}
+  //.section-2018.strategy {
+  //  .bottom-image {
+  //    height: 100%;
+  //    width: 100%;
+  //    padding-top: 57.5%;
+  //    margin-bottom: -1px;
+  //  }
+  //}
+  //.postid-8468 {
+  //  .section-2018.strategy {
+  //    .bottom-image {
+  //      padding-top: 47.5%;
+  //    }
+  //  }
+  //  .inspiration {
+  //    + {
+  //      .section-2018.strategy {
+  //        .bottom-image {
+  //          padding-top: 55%;
+  //        }
+  //      }
+  //    }
+  //  }
+  //}
+  //.postid-8615 {
+  //  .section-2018.strategy {
+  //    .bottom-image {
+  //      margin-top: -130px;
+  //    }
+  //  }
+  //}
+  //.postid-9737 {
+  //  .section-2018.strategy {
+  //    .bottom-image__block {
+  //      height: auto;
+  //    }
+  //    .bottom-image {
+  //      margin-top: 0;
+  //      min-width: 1px;
+  //      min-height: 1px;
+  //      position: static;
+  //      transform: translate(0,0);
+  //    }
+  //  }
+  //}
+}
+@media screen and ( max-width: 1300px ) {
+  //.postid-2612 {
+  //  .section-2018.strategy {
+  //    .bottom-image {
+  //      top: -13rem;
+  //      margin-bottom: -13rem;
+  //      left: 0;
+  //    }
+  //  }
+  //}
+  //.postid-6880 {
+  //  .section-2018.strategy {
+  //    .bottom-image {
+  //      top: -13rem;
+  //      margin-bottom: -13rem;
+  //      left: 0;
+  //    }
+  //  }
+  //}
+  //.postid-6912 {
+  //  .section-2018.strategy {
+  //    .bottom-image {
+  //      top: -13rem;
+  //      margin-bottom: -13rem;
+  //      left: 0;
+  //    }
+  //  }
+  //}
+  //.postid-8468 {
+  //  .section-2018.strategy {
+  //    .right-image {
+  //      max-width: 40%;
+  //      margin-top: 5%;
+  //    }
+  //    .left-image {
+  //      max-width: 54%;
+  //    }
+  //    .bottom-image {
+  //      top: -154px;
+  //      margin-bottom: -154px;
+  //    }
+  //  }
+  //  .inspiration {
+  //    + {
+  //      .section-2018.strategy {
+  //        .left-image {
+  //          max-width: 54%;
+  //          margin-bottom: 38rem;
+  //        }
+  //        .right-image {
+  //          padding-top: 11%;
+  //        }
+  //      }
+  //    }
+  //  }
+  //}
+  //.postid-8615 {
+  //  .section-2018.strategy {
+  //    .left-image {
+  //      margin-top: 50px;
+  //    }
+  //  }
+  //}
+}
+@media screen and ( max-width: 1279px ) {
+  .section-2018.strategy {
+    .right-image {
+      margin-bottom: 25px;
+    }
+  }
+}
+@media screen and ( max-width: 1024px ) {
+  //.postid-6912 {
+  //  .section-2018.strategy {
+  //    .bottom-image {
+  //      padding-top: 60%;
+  //    }
+  //  }
+  //}
+}
+@media screen and ( max-width: 1023px ) {
+  .postid-3806 {
+   .section-2018.strategy {
+     .left-image {
+       max-width: 38%;
+     }
+   }
+  }
+  .section-2018.strategy {
+    .right-image {
+      margin-bottom: 45px;
+    }
+  }
+}
+@media screen and ( max-width: 767px ) {
+  .postid-2638 .section-2018.strategy .right-image {
+    clear: both;
+    margin-top: 3rem;
+    max-width: 75%;
+  }
+  .section-2018.strategy .left-image {
+    max-width: 100%;
+  }
+  .strategy .bottom-image__block {
+    //height: 1px !important;
+    //padding-bottom: 75%;
+    //position: relative;
+    //img.bottom-image {
+    //  position: absolute !important;
+    //  top: 50%;
+    //  left: 50%; 
+    //  max-width: none !important;
+    //  width: auto !important;
+    //  height: 100% !important;
+    //  transform: translate(-50%, -50%) !important;
+    //}
+  }
+  //.postid-9737 .strategy {
+  //  padding-bottom: 5rem;
+  //}
+  //.postid-8594 {
+  //  .section-2018.strategy {
+  //    .left-image {
+  //      margin-top: 0;
+  //      max-width: 47%;
+  //    }
+  //    .right-image {
+  //      margin-top: 0;
+  //    }
+  //    .bottom-image {
+  //      margin-top: -45px;
+  //    }
+  //  }
+  //}
+  //.postid-8615 {
+  //  .section-2018.strategy {
+  //    .left-image {
+  //      margin-top: 0;
+  //    }
+  //    .right-image {
+  //      max-width: 47%;
+  //    }
+  //    .bottom-image {
+  //      margin-top: -30px;
+  //      clear: both;
+  //    }
+  //  }
+  //}
+  //.postid-8468 {
+  //  .section-2018.strategy {
+  //    .left-image {
+  //      margin-top: 1rem;
+  //      margin-bottom: 9rem;
+  //    }
+  //    .bottom-image {
+  //      top: -34px;
+  //      margin-bottom: -34px;
+  //    }
+  //  }
+  //  .inspiration {
+  //    + {
+  //      .section-2018.strategy {
+  //        .left-image {
+  //          margin-bottom: 12rem;
+  //        }
+  //      }
+  //    }
+  //  }
+  //}
+  //.postid-2612 {
+  //  .section-2018.strategy {
+  //    .bottom-image {
+  //      top: -3rem;
+  //      margin-bottom: -3rem;
+  //      padding-top: 57%;
+  //    }
+  //  }
+  //}
+  //.postid-6880 {
+  //  .section-2018.strategy {
+  //    .bottom-image {
+  //      top: -3rem;
+  //      margin-bottom: -3rem;
+  //      padding-top: 57%;
+  //    }
+  //  }
+  //}
+  //.postid-6912 {
+  //  .section-2018.strategy {
+  //    .bottom-image {
+  //      top: -3rem;
+  //      margin-bottom: -3rem;
+  //      padding-top: 57%;
+  //    }
+  //  }
+  //}
+  .section-2018.strategy {
+    .inner {
+      + {
+        .inner {
+          padding: 0;
+        }
+      }
+    }
+    .bottom-image {
+      padding-top: 78%;
+      margin-top: 0;
+    }
+  }
+  //.postid-9699 {
+  //  .responsive {
+  //    + {
+  //      .strategy {
+  //        padding-top: 0;
+  //      }
+  //    }
+  //  }
+  //}
+  //.postid-9737 {
+  //  .section-2018.strategy {
+  //    .mission-entry {
+  //      margin-bottom: 0;
+  //    }
+  //  }
+  //}
+}

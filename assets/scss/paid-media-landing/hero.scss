@@ -1,0 +1,173 @@
+.page-template-paid-media-landing-page {
+  .menu-icon {
+    display: none;
+  }
+  #logo a:before {
+    opacity: 1;
+  }
+}
+
+.hero-paid-media {
+  position: relative;
+  padding-top: 12rem;
+  margin-bottom: 18rem;
+  background: #380c59 url(../images/paid-bg.jpg) no-repeat center center / cover;
+  .inner {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    margin-top: -15rem;
+  }
+  &__left {
+    padding: 28rem 0 6rem;
+    width: 45%;
+  }
+  &__right {
+    width: 39%;
+    background: #210B39;
+    padding: 3rem 4rem;
+    box-sizing: border-box;
+    bottom: -15rem;
+    position: relative;
+    .btn {
+      width: 100%;
+      text-align: center;
+      background: transparent;
+      margin-top: 4rem;
+      &:hover {
+        background: $green;
+      }
+    }
+  }
+  .entry-content {
+    p {
+      font-size: 2.4rem;
+    }
+  }
+  .sq-main-1 {
+    width: 58px;
+    height: 58px;
+    left: 48%;
+    bottom: 25%;
+  }
+  .sq-main-2 {
+    background: #7447AA;
+  }
+}
+.purple-circle {
+  right: 13%;
+  position: absolute;
+  top: 45%;
+  pointer-events: none;
+}
+.graph-circle {
+  position: absolute;
+  top: 10%;
+  left: 45%
+}
+.sq-main-1, .sq-main-2 {
+  background: #5C3979;
+  position: absolute;
+  left: 50%;
+  bottom: 20%;
+  border-radius: 5px;
+  width: 71px;
+  height: 71px;
+  opacity: 1;
+  pointer-events: none;
+}
+.geen-circle {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: #06E06E;
+  position: absolute;
+  top: 10%;
+  left: 15%;
+}
+.step-row {
+  border: 1px solid $gold;
+  color: $white;
+  font-size: 1.4rem;
+  font-weight: 800;
+  padding: 1.2rem 2.5rem;
+  border-radius: 3rem;
+  display: inline-block;
+  line-height: 1;
+}
+.input-row {
+  margin-bottom: 1.3rem;
+  position: relative;
+  .wpcf7-not-valid-tip {
+    position: absolute;
+    top: 100%;
+    margin-top: -6.6rem;
+    right: 1rem;
+    color: red;
+  }
+  label {
+    color: $gold;
+    font-size: 1.4rem;
+    font-weight: 400;
+    display: block;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    line-height: 1;
+  }
+  input {
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    background: $white;
+    height: 6.6rem;
+    padding: 0 3rem;
+    color: #210B39;
+    font-size: 2rem;
+    font-family: $s;
+  }
+}
+@media screen and ( max-width: 1023px ) {
+  .hero-paid-media {
+    .inner {
+      margin-bottom: -8rem;
+    }
+    &__left {
+      width: 45%;
+      padding: 15rem 0 5rem;
+    }
+    &__right {
+      bottom: -8rem;
+      width: 50%;
+    }
+  }
+}
+@media screen and ( max-width: 767px ) {
+  .hero-paid-media {
+    margin-bottom: 350px;
+    .purple-circle {
+      right: 110%;
+    }
+    .graph-circle {
+      top: 2%;
+      left: 30%;
+    }
+    .inner {
+      display: block;
+      margin-bottom: 0;
+    }
+    &__left {
+      width: auto;
+      padding: 150px 0 25px;
+    }
+    &__right {
+      width: auto;
+      bottom: -280px;
+      margin-top: -280px;
+    }
+    .entry-content {
+      display: none;
+    }
+  }
+}

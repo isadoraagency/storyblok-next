@@ -1,0 +1,108 @@
+.related-posts {
+  background: #19052f;
+  padding: 5rem 0;
+  .inner {
+    max-width: 1200px;
+  }
+  .yarpp-related {
+    margin: 0;
+    img {
+      display: none;
+    }
+  }
+}
+.related-purple {
+  h2 {
+    font-size: 2.4rem;
+    color: #00e06d;
+    text-transform: uppercase;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 5rem;
+    letter-spacing: 0.3rem;
+  }
+}
+.related-items {
+  overflow: hidden;
+}
+.related-item {
+  width: 46.5%;
+  float: left;
+  &:first-child {
+    margin-right: 7%;
+  }
+  h3 {
+    color: #fff;
+    font-size: 3.4rem !important;
+    line-height: 4rem;
+    margin-bottom: 1rem;
+    letter-spacing: 0.1rem;
+    font-weight: 400;
+    font-family: $rd;
+    a {
+      color: #fff;
+      text-decoration: none;
+      display: block;
+      overflow: hidden;
+      font-weight: normal;
+      span {
+        display: block;
+        transition: transform 0.3s;
+        transform: translate3d(0,0,0);
+        position: relative;
+        &:before {
+          position: absolute;
+          top: 100%;
+          content: attr(data-hover);
+          font-weight: 700;
+          left: 0;
+          right: 0;
+          font-weight: normal;
+        }
+      }
+      &:hover {
+        span {
+          transform: translate3d(0,-100%,0);
+        }
+      }
+    }
+  }
+  p {
+    color: #b0adb9;
+    font-size: 1.9rem;
+    line-height: 2.6rem;
+    margin-bottom: 1.5rem;
+  }
+}
+.related-more {
+  position: relative;
+  display: block;
+  width: 41px;
+  height: 21px;
+  &:after {
+    background: url(../../images/sprite.png) no-repeat 0 -20px;
+    width: 31px;
+    height: 21px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+    transition: transform 0.5s;
+    content: "";
+  }
+  &:hover {
+    &:after {
+      transform: translate(1rem, 0);
+    }
+  }
+}
+@media screen and ( max-width: 560px ) {
+  .related-item {
+    &:first-child {
+      margin-right: 0;
+      margin-bottom: 2rem;
+    }
+    width: auto;
+    float: none;
+  }
+}

@@ -1,9 +1,9 @@
 import { renderRichText, storyblokEditable } from "@storyblok/react";
 
 const EventPage = ({ blok }) => {
-  const style = {
+  const style = blok.image?.filename ? {
     background: `url(${blok.image.filename}) no-repeat center center / cover` || '#333'
-  };
+  } : "#000";
 
   // const Class = blok.Background;
   const startDate = blok.start_date;
@@ -36,6 +36,7 @@ const EventPage = ({ blok }) => {
              dangerouslySetInnerHTML={{__html: renderRichText(blok.description)}}/>
 
       </div>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti dolorem excepturi expedita fugit libero nam porro praesentium, quos vel? Tenetur?
     </main>
   );
 };

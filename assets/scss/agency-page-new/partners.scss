@@ -1,0 +1,77 @@
+.new-agency-partners {
+  overflow: hidden;
+  position: relative;
+  padding: 12rem 0 14rem;
+  .inner {
+    position: relative;
+    z-index: 2;
+  }
+  .new-agency-hero__info {
+    width: 48.5%;
+    margin-left: 51.5%;
+  }
+  .d1 {
+    margin-bottom: 8rem;
+  }
+  &__grid {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__cell {
+    width: 25%;
+    box-sizing: border-box;
+    border: 1px solid $purple-3;
+    margin: -1px 0 0 -1px;
+    &-in {
+      padding-top: 100%;
+      position: relative;
+      overflow: hidden;
+
+        img {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%,-50%);
+          vertical-align: top;
+          max-width: 80%;
+        }
+
+
+    }
+  }
+  &__deco-1 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+  }
+  &__deco-2 {
+    position: absolute;
+    right: -28%;
+    top: -13%;
+  }
+}
+@media screen and ( max-width: 1023px ) {
+  .new-agency-partners .new-agency-hero__info {
+    margin-left: 30%;
+    width: 70%;
+  }
+}
+@media screen and ( max-width: 767px ) {
+  .new-agency-partners__deco-1 {
+    display: none !important;
+  }
+  .new-agency-partners {
+    padding: 9rem 0 8rem;
+    &__cell {
+      width: 50%;
+      &-in {
+        padding-top: 57%;
+      }
+    }
+    .new-agency-hero__info {
+      margin-left: 2rem;
+      width: calc(100% - 2rem);
+    }
+  }
+}

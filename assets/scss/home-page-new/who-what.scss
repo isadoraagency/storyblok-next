@@ -1,0 +1,180 @@
+@import "../global/global";
+.ia-what-who {
+  position: relative;
+  z-index: 10;
+}
+.ia-who {
+  padding: 10rem 0;
+  .h1 {
+    max-width: 1160px;
+    p {
+      font-size: $h1;
+      font-family: $rd;
+      strong {
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+.ia-what {
+  .ia-sub-title {
+    position: relative;
+    z-index: 5;
+  }
+  &__in {
+    max-width: 1252px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__right {
+    width: 32%;
+    position: relative;
+  }
+  &__left {
+    width: 58%;
+    position: relative;
+  }
+  &__list {
+    position: relative;
+    z-index: 5;
+  }
+  &__item {
+    margin-bottom: 5rem;
+    a {
+      color: $white;
+      text-decoration: none;
+      display: inline-block;
+      position: relative;
+      margin-bottom: 0;
+      transition: padding .35s;
+      &:after {
+        content: "";
+        display: inline-block;
+        width: 3rem;
+        height: 2.5rem;
+        margin-left: -3rem;
+        background: url('data:image/svg+xml,<svg width="30" height="25" viewBox="0 0 30 25" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M29.5838 13.8048H30V11.9243H29.5863L29.5662 11.9193C29.4419 11.8875 29.318 11.8543 29.1945 11.8196C28.7369 11.6906 28.2829 11.5489 27.8331 11.3946C26.6941 11.006 25.169 10.4042 23.6126 9.55176C20.454 7.82172 17.4058 5.19656 16.856 1.43998L16.72 0.509766L14.8596 0.781809L14.9956 1.71202C15.677 6.37061 19.4022 9.39004 22.7094 11.2009C23.1908 11.4642 23.6684 11.7055 24.1329 11.9243L0 11.9243L0 13.8048L23.8828 13.8048C23.3442 14.0456 22.8134 14.3035 22.2913 14.5783C18.8751 16.3798 15.0326 19.4111 14.9856 24.0415L14.9762 24.9818L16.8567 25.0006L16.8661 24.0603C16.9012 20.5639 19.831 18.0014 23.1682 16.2419C24.7954 15.3831 26.4283 14.7663 27.6601 14.3633C28.2743 14.1627 28.7846 14.0154 29.1394 13.9201C29.2871 13.88 29.4352 13.8415 29.5838 13.8048Z" fill="%23F98F72"/></svg>') no-repeat 0 0 / 100% auto;
+      }
+      span {
+        position: relative;
+        display: inline;
+        border-bottom: 1px solid transparent;
+        padding: 2px 0;
+        margin-right: 4rem;
+        transition: border .35s;
+      }
+    }
+  }
+  &__info {
+    padding-top: 3rem;
+    border-top: 1px solid $purple-5;
+    & + .ia-what__info {
+      margin-top: 3rem;
+    }
+    .entry-content {
+      margin-bottom: 2.5rem;
+    }
+
+    &-flex {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 2rem;
+      .ia-what__info {
+        &-left {
+          max-width: calc(100% - 15rem);
+          &--full { 
+            max-width: 100%; 
+          }
+        }
+        &-right {
+          width: 130px;
+        }
+      }
+    }
+  }
+  &__images {
+    width: 420px;
+    max-width: 100%;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+    z-index: 1;
+    &:before {
+      content: '';
+      display: block;
+      width: 100%;
+      padding-bottom: 135%;
+    }
+  }
+  &__image {
+    width: 100%;
+    padding-bottom: 135%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translate(0, 15rem);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    opacity: 0;
+    transition: transform .7s 0.1s, opacity .5s 0.1s;
+    &.active {
+      opacity: 1;
+      transform: translate(50%, 0) rotate(15deg);
+    }
+  }
+}
+.is-desktop {
+  .ia-what__item a:hover {
+    padding-left: 4rem;
+    span {
+      border-color: $white;
+    }
+  }
+}
+@media screen and (max-width: 1200px) {
+  .ia-what__info {
+    &-flex {
+      flex-direction: column-reverse;
+      .ia-what__info-left {
+        max-width: 100%;
+        width: 100%;
+      }
+      .ia-what__info-right {
+        width: 100%;
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+}
+@media screen and ( max-width: 767px ) {
+  .ia-what__info-flex {
+    padding-bottom: 0;
+  }
+  .ia-who {
+    padding: 6rem 0 2rem;
+  }
+  .ia-what-who {
+    padding-bottom: 4rem;
+  }
+  .ia-what {
+    &__in {
+      display: block;
+    }
+    &__left {
+      width: auto;
+      margin-bottom: 6rem;
+    }
+    &__right {
+      width: auto;
+    }
+    &__item {
+      margin-bottom: 3rem;
+    }
+    &__info {
+      padding-top: 2rem;
+    }
+  }
+}

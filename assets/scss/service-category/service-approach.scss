@@ -1,0 +1,132 @@
+.service-head {
+  font-size: 6rem;
+  line-height: 1.4;
+  margin-bottom: 5rem;
+  font-family: $rd;
+  font-weight: 500;
+  color: #210B39;
+  &__white {
+    color: #fff;
+  }
+}
+.service-approach {
+  margin-bottom: 12rem;
+  .inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  &-left {
+    width: 48%;
+    .h1 {
+      margin-bottom: 8rem;
+    }
+  }
+  &-right {
+    width: 48%;
+  }
+}
+.service-approach-stat {
+  &-text {
+    p {
+      margin-bottom: 1.2rem;
+    }
+    h6 {
+      color: #000;
+      font-size: 1.5rem !important;
+      line-height: 1.4;
+      font-weight: 800;
+    }
+  }
+  &-image {
+    width: 100%;
+    padding-bottom: 113%;
+    margin-bottom: 5rem;
+    position: relative;
+    &--small {
+      padding-bottom: 59%;
+    }
+    a {
+      position: absolute;
+      left: 2rem;
+      bottom: 2rem;
+      font-family: $s;
+      font-weight: 300;
+      color: #210B39;
+      text-decoration: none;
+      line-height: 1.2;
+      font-size: 1.7rem;
+      display: inline-block;
+      padding: 1.3rem 5.6rem 1.3rem 2.2rem;
+      background: #ffffff;
+      &:hover {
+        svg {
+          transform: translate(5px, -50%);
+        }
+      }
+      span {
+        font-weight: 800;
+      }
+      svg {
+        position: absolute;
+        top: 50%;
+        right: 2.4rem;
+        transition: transform 0.35s;
+        transform: translate(0, -50%);
+      }
+    }
+  }
+  &-info {
+    display: flex;
+    gap: 3rem;
+  }
+  &-val {
+    color: #210B39;
+    font-family: $rd;
+    font-size: 6.4rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1;
+    i {
+      font-size: 5rem;
+      font-style: normal;
+    }
+  }
+  &-text {
+    &.entry-content {
+      p {
+        line-height: 1.3;
+      }
+    }
+  }
+}
+@media screen and ( max-width: 767px ) {
+  .service-head {
+    font-size: 4rem;
+  }
+  .service-approach {
+    margin-bottom: 5rem;
+    .inner {
+      display: block;
+    }
+    &-left {
+      margin-bottom: 3rem;
+      .h1 {
+        margin-bottom: 3rem;
+      }
+    }
+    &-left,
+    &-right {
+      width: auto;
+    }
+    &-stat-image {
+      margin-bottom: 3rem;
+    }
+  }
+  .service-approach-stat-val {
+    font-size: 4.4rem;
+    i {
+      font-size: 75%;
+    }
+  }
+}

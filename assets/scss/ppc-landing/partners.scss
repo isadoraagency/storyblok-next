@@ -1,0 +1,60 @@
+.ppc-partners {
+  padding: 10rem 0;
+  position: relative;
+  .inner {
+    position: relative;
+    z-index: 10;
+  }
+  &__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8rem;
+  }
+  &__title {
+    width: 46%;
+  }
+  &__description {
+    width: 50%;
+    padding-left: 7rem;
+    position: relative;
+    svg {
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  }
+  &__dec {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70%;
+    transform: translate(-20%, 3rem);
+  }
+  &__circle {
+    position: absolute;
+    right: 0;
+    top: 3rem;
+    transform: translate(60%, 0)
+  }
+}
+@media screen and ( max-width: 767px ) {
+  .ppc-partners {
+    padding-bottom: 6rem;
+    &__head {
+      display: block;
+      margin-bottom: 4rem;
+    }
+    &__title {
+      width: auto;
+      margin-bottom: 2rem;
+    }
+    &__description {
+      width: auto;
+      padding-left: 0;
+      svg {
+        display: none;
+      }
+    }
+  }
+}

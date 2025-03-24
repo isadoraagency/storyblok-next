@@ -1,0 +1,460 @@
+.responsive {
+  &--white {
+    background: #fff !important;
+  }
+  &--grey { 
+    background: #f2f2f2 !important;
+  }
+  + {
+    .responsive {
+      padding-top: 1rem;
+      margin-top: -16rem;
+      + {
+        .responsive {
+          padding-top: 1rem;
+          margin-top: -16rem;
+        }
+      }
+    }
+  }
+  .iphone-mask {
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+    box-sizing: border-box;
+    text-align: center;
+
+    .video-wrap-2019 {
+      position: absolute;
+      top: 3.4%;
+      bottom: 3.6%;
+      left: 9.1%;
+      right: 9.1%;
+    }
+    img {
+      padding: 5.4% 9.1% 5.6%;
+      width: 81.8%;
+    }
+    &:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 22;
+      right: 0;
+      bottom: 0;
+      content: '';
+      background: url(../images/iphone-mask.png) no-repeat 50% 0 / contain;
+      pointer-events: none;
+    }
+
+  }
+  .two-centered {
+    text-align: center;
+    .iphone-mask {
+      float: none;
+      display: inline-block;
+    }
+  }
+}
+//.postid-8927 {
+//  .inspiration {
+//    padding-bottom: 10rem;
+//    + .responsive-section {
+//      padding-top: 0;
+//    }
+//  }
+//}
+//.postid-9028 {
+//  .responsive-parallax {
+//    + {
+//      .responsive-section {
+//        padding-top: 5rem;
+//        padding-top: 9rem;
+//      }
+//    }
+//    background: #fff;
+//  }
+//}
+.responsive.responsive-parallax {
+  + {
+    .responsive {
+      margin-top: 0;
+    }
+  }
+  &.responsive--grey {
+    + .animation--grey {
+      padding-top: 0;
+    }
+  }
+}
+.responsive-parallax {
+  .iphone-mask {
+    &:before {
+      display: none;
+    }
+    img {
+      padding: 0;
+      padding: 0;
+      position: relative;
+      position: relative;
+      width: auto;
+      width: auto;
+      height: auto;
+      height: auto;
+      min-width: 100%;
+      min-width: 100%;
+      min-height: 100%;
+      min-height: 100%;
+    }
+  }
+  .iphone-mask-parallax { 
+    padding-top: 80px;
+    padding-bottom: 160px;
+    display: flex !important;
+    margin: 0 auto !important;
+    float: left !important;
+  }
+  .laptop-mask-parallax {
+    padding-top: 80px;
+    padding-bottom: 160px;
+    display: flex !important;
+    margin: 0 auto !important;
+    float: left !important;
+    left: auto !important;
+    max-width: 1380px;
+    height: calc(100vh - 120px);
+    justify-content: space-between;
+  }
+  .laptop-mask-parallax-left {
+    width: 36%;
+    padding-top: 2%;
+  }
+  .laptop-mask-parallax-right {
+    width: 45%;
+    margin-left: 5%;
+    order: 1;
+    padding-top: 2%;
+  }
+  .laptop-mask-parallax.stop-fixed {
+    left: 0 !important;
+    position: relative !important;
+    bottom: 0;
+    top: auto !important;
+    margin-bottom: -100vh !important;
+  }
+  .short {
+    .laptop-mask-parallax.stop-fixed {
+      margin-bottom: 0px !important;
+      .laptop-mask-parallax-bg {
+        background-position-y: 0px;
+      }
+    }
+  }
+  .iphone-mask-parallax.ready {
+    float: left !important;
+  }
+  .laptop-mask-parallax.ready {
+    float: left !important;
+  }
+  .iphone-mask-parallax-block {
+    position: relative;
+    width: 100%;
+    max-width: 320px;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+  }
+  .laptop-mask-parallax-block {
+    position: relative;
+    width: 60%;
+    overflow: hidden;
+    opacity: 0;
+    -moz-box-shadow: 0px 0px 25px 2px rgba(34, 60, 80, 0.2);
+    box-shadow: 0px 0px 25px 2px rgba(34, 60, 80, 0.2);
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    transition: opacity 0.5s ease-in;
+  }
+  .laptop-mask-parallax-fullimage {
+    display: none;
+  }
+  .iphone-mask-parallax-bg {
+    background-size: calc(100% - 0px);
+    background-repeat: no-repeat;
+    border-radius: 40px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    background-position-y: 20px;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 3px;
+    left: 0;
+    margin: 0 20px;
+    width: calc(100% - 40px);
+    background-color: #fff;
+    transition: all 0.15s ease;
+  }
+  .laptop-mask-parallax-bg {
+    background-size: calc(100% - 0px);
+    background-repeat: no-repeat;
+    border-radius: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    background-color: none;
+    background-position-y: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0 0px;
+    top: 35px;
+    position: absolute;
+    left: 0;
+    transition: all 0.15s ease;
+  }
+  .laptop-mask-parallax-head {
+    border-radius: 0;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    width: calc(100% - 30px);
+    margin: 0 0px;
+    height: 35px;
+    background: #ffffff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+    padding: 0 15px;
+    span {
+      background: #c3c3c3;
+      width: 10px;
+      height: 10px;
+      margin-right: 7px;
+      border-radius: 100px;
+    }
+  }
+
+}
+
+.responsive-parallax.short {
+  .laptop-mask-parallax.stop-fixed {
+    margin-bottom: 0 !important;
+  }
+  .laptop-mask-parallax-bg {
+    background-position-y: 0px !important;
+  }
+}
+.responsive-parallax-fixed--flex {
+  .responsive-parallax-content {
+    width: 40%;
+    margin-right: 10%;
+  }
+  .laptop-mask-parallax {
+    width: 100% !important;
+    max-width: 1400px;
+    align-items: center;
+  }
+}
+.laptop-mask-parallax-hidedesk {
+  display: none;
+}
+.responsive-parallax-fixed {
+  padding: 0 0 100vh;
+  display: flex;
+  margin-bottom: -14rem;
+  justify-content: center;
+}
+//.postid-9699 {
+//  .responsive-parallax {
+//    background: #fcfcfc;
+//  }
+//  .animation {
+//    + {
+//      .responsive-parallax {
+//        padding-top: 4rem;
+//      }
+//    }
+//  }
+//  .responsive {
+//    + {
+//      .responsive {
+//        margin-top: -6rem;
+//      }
+//    }
+//  }
+//}
+
+@media screen and ( max-width: 1300px ) {
+  //.postid-9132 {
+  //  .inspiration {
+  //    + {
+  //      .responsive-parallax {
+  //        padding: 6.2rem 0 0;
+  //      }
+  //    }
+  //  }
+  //}
+}
+@media screen and ( min-width: 992px ) {
+  .responsive-parallax {
+    .laptop-mask-parallax {
+      width: calc(100% - 100px) !important;
+      padding: 0px 50px 160px;
+    }
+  }
+}
+@media screen and ( min-width: 1280px ) {
+  .responsive-parallax {
+    .laptop-mask-parallax {
+      width: calc(1320px - 100px) !important;
+      padding: 0px 50px 160px;
+    }
+  }
+}
+
+@media screen and ( max-width: 991px ) {
+  .laptop-mask-parallax-hidetablet {
+    display: none !important;
+  }
+  .laptop-mask-parallax-hidedesk {
+    display: block !important;
+  }
+  .responsive-parallax .laptop-mask-parallax.stop-fixed {
+    position: relative !important;
+    top: auto !important;
+    height: auto;
+    margin: 2rem auto !important;
+    padding: 0px 4%;
+
+  }
+  .responsive-parallax {
+    .laptop-mask-parallax {
+      position: relative !important;
+      top: auto !important;
+      height: auto;
+      margin: 2rem auto !important;
+      padding: 0px 4%;
+    }
+    .laptop-mask-parallax-block {
+      overflow: visible;
+      opacity: 1;
+      width: 100%;
+    }
+    .laptop-mask-parallax-bg {
+      display: none;
+    }
+    .laptop-mask-parallax-fullimage {
+      margin-top: 35px;
+      display: block;
+    }
+  }
+  .responsive-parallax-fixed {
+    padding-bottom: 0 !important;
+    padding-top: 0 !important;
+    margin-bottom: 0;
+  }
+  .laptop-mask-parallax-border {
+    display: none;
+  }
+}
+@media screen and ( max-height: 800px ) {
+  .responsive-parallax {
+    .iphone-mask-parallax-block {
+      max-width: 270px;
+    }
+  }
+}
+@media screen and ( min-width: 768px ) {
+  .responsive-parallax {
+    .laptop-mask-parallax {
+      //height: calc(100vh - 180px);
+    }
+  }
+}
+@media screen and ( max-width: 767px ) {
+  .responsive {
+    + .animation--grey {
+      padding-top: 0;
+    }
+  }
+  //.postid-8927 .inspiration{
+  //  padding-bottom: 8rem;
+  //}
+  .responsive {
+
+    .iphone-mask {
+      img {
+        padding: 3.4% 9.1% 3.6%;
+        margin: 0 auto;
+      }
+      float: left;
+      max-width: 74vw;
+      width: 100%;
+      margin: 0 auto 0;
+      visibility: visible !important;
+      opacity: 1 !important;
+      transform: translate(0,0) !important;
+      &:first-child {
+        float: left;
+        max-width: 74vw;
+        width: 100%;
+        margin: 0 auto 0rem;
+        visibility: visible !important;
+        opacity: 1 !important;
+        transform: translate(0,0) !important;
+      }
+    }
+
+    .slick-slider {
+      margin-bottom: 0;
+    }
+  }
+  //.postid-9028 {
+  //  .cs-testimonial {
+  //    + {
+  //      .responsive-parallax {
+  //        padding-top: 5rem;
+  //      }
+  //    }
+  //  }
+  //  .responsive-parallax {
+  //    padding-top: 0rem;
+  //  }
+  //}
+  .responsive-slider {
+    margin-right: -5vw;
+    margin-left: -5vw;
+    &.fix {
+      .slick-track {
+        transform: translate3d(0px, 0px, 0px)!important; 
+      }
+    }
+  }
+  .responsive.hide {
+    display: none;
+    display: block;
+  }
+  //.postid-5360 {
+  //  .inspiration {
+  //    + {
+  //      .responsive-parallax {
+  //        padding-top: 3rem;
+  //      }
+  //    }
+  //  }
+  //}
+}
+@media screen and ( max-width: 480px ) {
+  .responsive {
+    .iphone-mask {
+      img {
+        padding: 5.4% 9.1% 5.6%;
+      }
+      max-width: 80vw;
+      &:first-child {
+        max-width: 80vw;
+      }
+    }
+  }
+}

@@ -1,0 +1,220 @@
+.user-experience {
+  background: #210b39 url(../images/user-experience.jpg) no-repeat 0 0 ;
+  padding: 13rem 0 1px;
+  position: relative;
+  h2 {
+    color: #fff;
+    font-size: 5.6rem;
+    line-height: 1.25;
+    //font-weight: 600;
+    max-width: 815px;
+    margin: 0 auto 5rem;
+  }
+  .entry-content {
+    max-width: 815px;
+    margin: 0 auto;
+    * {
+      color: #fff;
+    }
+  }
+  &__item {
+    padding-right: 9rem;
+    color: #fff;
+    font-size: 2rem;
+    line-height: 1.5;
+    position: relative;
+    height: auto;
+    transition: transform 0.35s, padding 0.35s;
+    &:hover {
+      transform: scale(1.2);
+      .user-experience__item-in {
+        padding-top: 4rem;
+        &:before {
+          width: 0;
+          height: 0;
+        }
+      }
+    }
+    &-in {
+      transition: padding 0.35s;
+      padding: 3.2rem;
+      box-sizing: border-box;
+      position: relative;
+      height: 100%;
+      &:before {
+        content: "";
+        width: 0;
+        height: 0;
+        background: #A384C8;
+        border-radius: 50%;
+        position: absolute;
+        left: 0;
+        top: -5rem;
+        z-index: 10;
+        transition: width 0.35s, height 0.35s;
+      }
+    }
+  }
+  &__lines {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    .border-4 {
+      background: #41145E;
+    }
+    .border-2 {
+      background: #F3C17D;
+    }
+    .border-1,
+    .border-3 {
+      background: linear-gradient(90deg, #41145E 0%,#A2429E 50%, #F3C17D 100%);
+    }
+  }
+  .slick-track {
+    display: flex;
+  }
+  .slick-list {
+    margin-top: 5rem;
+    margin-bottom: 12rem;
+    overflow: visible;
+  }
+  .slick-arrow {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    border: 1px solid #00E06D;
+    text-indent: 999px;
+    overflow: hidden;
+    background: none;
+    padding: 0;
+    position: relative;
+    margin: 0 calc(-1*(100vw - 1392px)/2) 0 auto;
+    display: block !important;
+    &:before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 19px;
+      height: 16px;
+      background: url(../images/arrow-green-left.svg) no-repeat 0 0;
+    }
+    &.slick-prev {
+      &:before {
+        transform: translate(-50%, -50%) scaleX(-1);
+      }
+    }
+
+  }
+  .decor-doublesquare {
+    position: absolute;
+    bottom: 25%;
+    right: 15%;
+    &:before,
+    &:after {
+      filter: blur(1px);
+      box-shadow: none;
+      width: 64px;
+      height: 64px;
+      background: #A384C8;
+      animation: run 15s infinite ease-in-out;
+    }
+    &:after {
+      animation: revercerun 20s infinite ease-in-out;
+      background: #A384C8;
+      opacity: 0.1;
+    }
+  }
+}
+.border-1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(243,193,125,1) 0%, rgba(180,104,115,1) 100%);
+}
+.border-2 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 1px;
+  background: linear-gradient(180deg, rgba(180,104,115,1) 0%, rgba(54,24,92,1) 100%);
+}
+.border-3 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(-90deg, rgba(54,24,92,1) 0%, rgba(229,94,143,1) 100%);
+}
+.border-4 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 1px;
+  background: linear-gradient(0deg, rgba(229,94,143,1) 0%, rgba(243,193,125,1) 100%);
+}
+@media screen and ( max-width: 1400px ) {
+  .user-experience .slick-arrow {
+    margin-right: 0;
+  }
+}
+@media screen and ( max-width: 1024px ) {
+  .user-experience {
+    &__item {
+      padding-right: 4rem;
+    }
+  }
+}
+@media screen and ( max-width: 767px ) {
+  .user-experience {
+    padding: 7rem 0 1px;
+    h2 {
+      font-size: 4rem;
+    }
+    &__list {
+      padding-bottom: 70px;
+    }
+    .slick-list {
+      margin-bottom: 5rem;
+    }
+    .slick-arrow {
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      bottom: 0;
+      margin-right: 0;
+      &.slick-disabled {
+        opacity: 0.4;
+        pointer-events: none;
+      }
+      &.slick-prev {
+        right: 60px;
+      }
+      &.slick-next {
+        right: 0;
+      }
+    }
+    &__item {
+      padding-right: 4rem;
+      &:hover {
+        transform: scale(1);
+        .user-experience__item-in {
+          padding-top: 3.2rem;
+          &:before {
+            width: 0;
+            height: 0;
+          }
+        }
+      }
+    }
+  }
+}

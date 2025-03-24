@@ -1,0 +1,192 @@
+.new-agency-hero {
+	position: relative;
+	padding: 21rem 0 9rem; 
+  margin: 0 0 11rem;
+  overflow: hidden;
+	&__in {
+		padding-right: 11.5%;
+	}
+	.inner {
+    position: relative;
+    z-index: 20;
+  }
+  &__info {
+    width: 41.5%;
+    margin-left: 58.5%;
+    padding-top: 4.5rem;
+    position: relative;
+    &:before {
+      position: absolute;
+      left: -6.2rem;
+      top: 4.8rem;
+      width: 2.9rem;
+      height: 2.9rem;
+      content: '';
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">  <path fill-rule="evenodd" clip-rule="evenodd" d="M1.35829 9.92931L10.5793 14.0024H0.5V15.7866H10.2253L1.20865 19.4313L1.87729 21.0855L11.0791 17.3659L4.06054 24.3859L5.32227 25.6474L12.0681 18.9002L8.21138 27.627L9.8433 28.3482L13.9204 19.1228V29.209H15.7046V19.4879L19.3473 28.4988L21.0015 27.8301L17.2821 18.6296L24.2999 25.6475L25.5615 24.3859L18.8181 17.6424L27.541 21.4974L28.2623 19.8655L19.0328 15.7866H29.125V14.0024H19.4012L28.4147 10.3603L27.7463 8.70608L18.5432 12.4248L25.5615 5.40822L24.3 4.14646L17.5598 10.8851L21.4116 2.16514L19.7795 1.44423L15.7046 10.6693V0.583984H13.9204V10.3114L10.2763 1.29275L8.6221 1.96116L12.3412 11.1656L5.32221 4.14654L4.0606 5.40815L10.8034 12.1509L2.07921 8.29726L1.35829 9.92931Z" fill="url(%23paint0_radial_2006_740)"/>  <defs>    <radialGradient id="paint0_radial_2006_740" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(14.8125 14.8965) rotate(90) scale(14.3125)">      <stop offset="0.40625" stop-color="%23E28366"/>      <stop offset="1" stop-color="%23E28366" stop-opacity="0"/>    </radialGradient>  </defs></svg>');
+    }
+  }
+  &__dec-1 {
+    position: absolute;
+    left: 40.5%;
+    top: -48%;
+    max-width: 46.1%;
+  }
+  &__dec-2 {
+    position: absolute;
+    left: 0;
+    bottom: -9%;
+    max-width: 58%;
+  }
+  &__dec-3 {
+    position: absolute;
+    bottom: -7.5%;
+    right: -15%;
+    max-width: 75%;
+  }
+  &__dec-4 {
+    position: absolute;
+    left: -9%;
+    top: 14%;
+    max-width: 20%;
+  }
+  &__dec-5 {
+    position: absolute;
+    left: 15.3%;
+    top: 8%;
+    max-width: 12%;
+  }
+}
+
+.ia-hero-home {
+  &__in {
+    max-width: 1095px;
+    margin: 0 auto;
+  }
+  &__bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    mask-image: url(../img/hero-mask-agency.svg);
+    mask-size: 100%;
+    mask-repeat: no-repeat;
+    mask-position: top;
+    -webkit-mask-image: url(../img/hero-mask-agency.svg);
+    -webkit-mask-size: 100%;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: top;
+    &--services {
+      mask-image: url(../img/agency-services-mask.svg);
+      -webkit-mask-image: url(../img/agency-services-mask.svg);
+      min-height: 82.9rem;
+    }
+    &--partners {
+      mask-image: url(../img/agency-partners-mask.svg);
+      -webkit-mask-image: url(../img/agency-partners-mask.svg);
+      min-height: 82.9rem;
+    }
+    div {
+      position: fixed;
+      top: 50%;
+      width: 100vw;
+      height: 100vw;
+      min-height: 100%;
+      left: 50%;
+      margin-left: -50vw;
+      margin-top: -50vw;
+      video,img {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: auto;
+        height: auto;
+        min-width: 100%;
+        min-height: 100%;
+        // opacity: 0.3;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .ia-hero-home__bg {
+    background-size: cover;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .page-template-agency-2024-page h1 {
+    font-size: 4.8rem;
+  }
+  .new-agency-hero {
+    padding-top: 15rem;
+    &__in {
+      padding-right: 0;
+    }
+    &__info {
+      padding-top: 0;
+      width: 61%;
+      margin-left: 39%;
+      &:before {
+        left: -4rem;
+        top: .5rem;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1023px) {
+  .page-template-agency-2024-page h1 {
+    font-size: 4.2rem;
+  }
+  .new-agency-hero {
+    &__dec-1 {
+      top: -32%;
+    }
+    &__info {
+      width: 71%;
+      margin-left: 29%;
+    }
+  }
+}
+@media screen and (max-width: 767px) {
+  .page-template-agency-2024-page h1 {
+    font-size: 3.2rem;
+  }
+  .new-agency-hero {
+    padding: 12rem 0 3rem;
+    margin-bottom: 8rem;
+    &__dec-1 {
+      left: 70%;
+      top: -5rem;
+    }
+    &__dec-2 {
+      max-width: 63%;
+    }
+    &__dec-3 {
+      max-width: 84%;
+      bottom: 0;
+    }
+    &__dec-4 {
+      max-width: 23%;
+    }
+    &__dec-5 {
+      max-width: 15%;
+    }
+    &__info {
+      width: calc(100% - 2rem);
+      margin-left: 2rem;
+      margin-top: 1.5rem;
+      &:before {
+        width: 1.5rem;
+        height: 1.5rem;
+        top: .4rem;
+        background-size: contain;
+        left: -2.4rem;
+      }
+      .p1 {
+        font-size: 1.6rem!important;
+      }
+    }
+  }
+}

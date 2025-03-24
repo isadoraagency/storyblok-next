@@ -1,0 +1,113 @@
+.case-studies-section {
+  margin-bottom: 4rem;
+  h2.ia-h2 {
+    max-width: 900px;
+  }
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 3rem;
+  }
+  &__item {
+    width: 50%;
+    display: block;
+    text-decoration: none;
+    color: #210b39;
+    h3 {
+      transition: color 0.35s;
+    }
+    &:hover {
+      .case-studies-section__item-image {
+        div {
+          transform: scale(1.1);
+        }
+      }
+      h3 {
+        color: $purple;
+      }
+    }
+    &:nth-child(2n+2) {
+      width: 42.5%;
+      margin-top: 21.5rem;
+    }
+    &-image {
+      width: 100%;
+      margin-bottom: 3.3rem;
+      overflow: hidden;
+      div {
+        width: 100%;
+        padding-bottom: 136%;
+        transition: transform 1s;
+      }
+    }
+    &-info {
+      max-width: 510px;
+      .entry-content {
+        p {
+          color: $purple;
+        }
+      }
+    }
+    &-sub-title {
+      font-size: 1.4rem;
+      text-transform: uppercase;
+      padding-left: 9.6rem;
+      margin-bottom: 3.5rem;
+      position: relative;
+      color: #210b39;
+      &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 7.7rem;
+        height: 1px;
+        background: $gold;
+      }
+    }
+  }
+}
+.mobile-head {
+  display: none;
+}
+@media screen and ( max-width: 767px ) {
+  .case-studies-section {
+    padding-bottom: 20px;
+    .desktop-head {
+      display: none;
+    }
+    .mobile-head {
+      display: block;
+    }
+    .entry-content {
+      display: none;
+    }
+    &__list {
+      display: block;
+      padding-top: 0;
+    }
+    &__item {
+      width: auto;
+      margin-bottom: 50px;
+      .ia-h3 {
+        margin-bottom: 20px !important;
+      }
+      &-sub-title {
+        font-size: 14px;
+      }
+      .entry-content {
+        display: block;
+        p {
+          font-size: 18px;
+        }
+      }
+      &:nth-child(2n+2) {
+        margin-top: 0;
+        width: auto;
+      }
+      //&:last-child {
+      //  margin-bottom: 0;
+      //}
+    }
+  }
+}

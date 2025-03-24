@@ -1,0 +1,322 @@
+#trigger2 {
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  z-index: 999999;
+}
+.diagram-wrap {
+  max-width: 455px;
+  margin-left: -227px;
+  min-height: 460px;
+  position: absolute;
+  left: 50%;
+  top: 16rem;
+}
+.contact-fields {
+  padding-bottom: 10rem;
+}
+.diagram-estimate {
+  border-radius: 40rem;
+  box-shadow: 0 0 3rem #ccc;
+  display: inline-block;
+  padding: 5rem;
+  background: rgba(255,255,255, 0.5);
+}
+.diagram-estimate.active-ab {
+  position: fixed;
+  top: 81px;
+  margin-left: 0;
+  width: 48%;
+}
+.diagram-estimate.active-ab.active-bottom {
+  position: absolute;
+  bottom: 0;
+  top: auto;
+}
+#canvas-holder {
+  width: 36.5rem;
+  height: 36.5rem;
+  position: relative;
+  .amount {
+    font-family: $s;
+    color: #210b39;
+    font-weight: 700;
+    font-size: 2.7rem;
+    text-align: center;
+    margin: 3px 0 0 0;
+    width: 150px;
+    position: absolute;
+    left: 50%;
+    padding: 0;
+    height: 47px;
+    transform: translateX(-50%);
+    opacity: 1;
+    transition: opacity 0.3s, left 0.3s;
+    border: none;
+  }
+  .amount.ToLeft {
+    left: 30%;
+    opacity: 0;
+  }
+  .amount.FromRight {
+    left: 60%;
+    opacity: 0;
+  }
+}
+#chart-area2 {
+  width: 100% !important;
+  height: 100% !important;
+}
+#canvas-holder.active {
+  &:after {
+    opacity: 0;
+  }
+}
+.range-estimate {
+  white-space: nowrap;
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  margin-top: -15px;
+  display: none;
+  p {
+    position: relative;
+    height: 47px;
+    span.tooltip {
+      position: absolute;
+      z-index: -1;
+      opacity: 0;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 10px 15px;
+      background: #353b47;
+      font: 9px Lato-Light, sans-serif;
+      color: #fff;
+      border-radius: 5px;
+      margin-top: 20px;
+      transition: opacity 0.3s;
+      white-space: normal;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      max-width: 150px;
+      &:after {
+        border-bottom: 8px solid #353b47;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        content: "";
+        position: absolute;
+        top: -8px;
+        left: 50%;
+        margin-left: -4px;
+      }
+    }
+    &:hover {
+      span.tooltip {
+        opacity: 1;
+        z-index: 1;
+      }
+    }
+  }
+}
+.title-beta {
+  display: none;
+}
+.range-plus {
+  background: url(../../images/sprite.png) no-repeat 0 0;
+  width: 38px;
+  height: 37px;
+  display: block;
+  cursor: pointer;
+  position: absolute;
+  top: 3px;
+  z-index: 3;
+  background-position: 0 -40px;
+  right: 55px;
+}
+.range-minus {
+  background: url(../../images/sprite.png) no-repeat 0 0;
+  width: 38px;
+  height: 37px;
+  display: block;
+  cursor: pointer;
+  position: absolute;
+  top: 3px;
+  z-index: 3;
+  background-position: -42px -40px;
+  left: 55px;
+}
+.range-minus.disable {
+  background-position: -42px -83px;
+  span.tooltip {
+    .min {
+      display: none;
+    }
+    background: #353b47;
+    .min-disable {
+      display: block;
+    }
+  }
+}
+.range-plus.disable {
+  background-position: 0 -83px;
+  span.tooltip {
+    display: none;
+  }
+}
+.min-disable {
+  display: none;
+}
+.range-box.disable {
+  span.tooltip {
+    &:after {
+      border-bottom-color: #353b47;
+    }
+  }
+}
+.range-box {
+  span.tooltip {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 15px;
+    background: #353b47;
+    font: 9px Lato-Light, sans-serif;
+    color: #fff;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: opacity 0.3s;
+    white-space: normal;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    &:after {
+      border-bottom: 8px solid #353b47;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      content: "";
+      position: absolute;
+      top: -8px;
+      left: 50%;
+      margin-left: -4px;
+    }
+    strong {
+      display: block;
+      font: 10px Lato-Bold, sans-serif;
+      text-transform: uppercase;
+    }
+  }
+  &:hover {
+    span.tooltip {
+      opacity: 1;
+      z-index: 1;
+    }
+  }
+}
+.title-range {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: #738289;
+  letter-spacing: 1px;
+  font-size: 12px;
+  font-family: $s;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.title-range-none {
+  position: absolute;
+  top: 50%;
+  margin-top: -15px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: #00e06d;
+  font-family: $s;
+  font-size: 3.4rem;
+  font-weight: 700;
+}
+.contact-right-fields {
+  .diagram-wrap {
+    visibility: hidden;
+    z-index: -999;
+    position: absolute;
+  }
+}
+@media screen and ( max-width: 1280px ) {
+  .diagram-wrap {
+    top: 11rem;
+  }
+}
+@media screen and ( max-width: 1150px ) {
+  #trigger1 {
+    margin-top: -141px;
+  }
+  .diagram-wrap {
+    margin-left: -170px;
+  }
+}
+@media screen and ( max-width: 800px ) {
+  .content-contact {
+    .col-r {
+      visibility: hidden;
+    }
+    padding-bottom: 5rem;
+  }
+  .contact-right-fields {
+    .diagram-wrap {
+      z-index: 1;
+      visibility: visible;
+      position: static;
+      padding-top: 7rem;
+    }
+  }
+  .contact-left-fields {
+    .diagram-wrap {
+      z-index: -999;
+      visibility: hidden;
+      position: absolute;
+    }
+  }
+  .diagram-wrap {
+    text-align: center;
+    min-height: 1px !important;
+    height: auto !important;
+    margin: 0px auto;
+  }
+  .diagram-estimate {
+    position: static !important;
+  }
+  .contact-bottom-fields {
+    margin-top: 0;
+  }
+  .contact-bottom-fields-description {
+    width: auto;
+    padding-top: 9rem;
+  }
+  #canvas-holder {
+    .amount {
+      font-size: 1.9rem;
+      width: 120px;
+    }
+    convas {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+@media screen and ( max-width: 560px ) {
+  .diagram-estimate {
+    padding: 0;
+    box-shadow: none;
+  }
+}

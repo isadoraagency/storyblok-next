@@ -1,0 +1,136 @@
+@import "../global/global";
+.ia-works {
+  padding: 10rem 0;
+  .inner {
+    .ia-sub-title {
+      margin-bottom: 1rem;
+    }
+    > .d2 {
+      margin-bottom: -13rem;
+      line-height: 1;
+    }
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+
+  }
+  &__img {
+    width: 100%;
+    margin-bottom: 3rem;
+    position: relative;
+    overflow: hidden;
+    div {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      transition: transform 0.8s;
+    }
+  }
+  &__item {
+    width: 32%;
+    margin-right: 10%;
+    margin-bottom: 5.5rem;
+    display: block;
+    text-decoration: none;
+    .h4 {
+      span {
+        border-bottom: 1px solid transparent;
+        transition: border .35s;
+      }
+    }
+    &:first-child {
+      padding-top: 18rem;
+    }
+    .ia-works__img {
+      padding-bottom: 136%;
+    }
+    &:nth-child(4n+1),
+    &:nth-child(4n+4){
+      width: 58%;
+      .ia-works__img {
+        padding-bottom: 62.5%;
+      }
+    }
+    &:nth-child(4n+3){
+      padding-top: 6rem;
+    }
+    &:nth-child(2n+2) {
+      margin-right: 0;
+    }
+    &:nth-last-child(1),
+    &:nth-last-child(2){
+      margin-bottom: 0;
+
+    }
+  }
+  &__btn {
+    transform: translate(0, -100%);
+  }
+}
+
+  .ia-works__item:hover {
+    .ia-works__img {
+      div {
+        transform: scale(1.1);
+      }
+    }
+    .h4 {
+      span {
+        border-bottom: 1px solid $white;
+      }
+    }
+  }
+
+@media screen and ( max-width: 767px ) {
+  .ia-works {
+    padding: 4rem 0 6rem;
+    .inner {
+      > .d2 {
+        margin-bottom: 2rem;
+        max-width: 100%;
+      }
+    }
+    &__list {
+      //display: block;
+    }
+    &__item {
+      margin-right: 0;
+      margin-bottom: 4.5rem;
+      //max-width: 275px;
+      width: 79%;
+      &:nth-last-child(2) {
+        margin-bottom: 4.5rem;
+      }
+      &:first-child,
+      &:nth-child(4n+3) {
+        padding-top: 0;
+      }
+      &:nth-child(4n+1),
+      &:nth-child(4n+4) {
+        width: 100%;
+        max-width: 100%;
+      }
+      &:last-child {
+        margin-bottom: 3rem;
+      }
+      &:nth-child(4n+1) { order: 1;}
+      &:nth-child(4n+2) { order: 2;}
+      &:nth-child(4n+3) { order: 4;}
+      &:nth-child(4n+4) { order: 3;}
+    }
+    &__img {
+      margin-bottom: 2rem;
+    }
+  }
+  .ia-works__btn {
+    transform: translate(0, 0);
+    text-align: left !important;
+    padding: 0 5%;
+  }
+}

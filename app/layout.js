@@ -1,12 +1,22 @@
 import StoryblokProvider from "../components/StoryblokProvider";
+import "/assets/css/animate.css";
 import "/assets/scss/main.scss";
-export default function RootLayout({ children }) {
+import Footer from "../components/layout/Footer";
+import Header from "../components/layout/Header";
+import { fetchStory } from '@/lib/storyblokApi';
+
+export default async function RootLayout({ children }) {
+
+  const dataHeader = await fetchStory("settings/header");
+  const dataFooter = await fetchStory("settings/footer");
   return (
     <html lang="en">
     <body>
-      <div>Header</div>
-       <StoryblokProvider>{children}</StoryblokProvider>
-      <div>Footer</div>
+      <Header data={dataHeader.data}></Header>
+        <StoryblokProvider>
+          {children}
+        </StoryblokProvider>
+      <Footer data={dataFooter.data}></Footer>
     </body>
     </html>
   );

@@ -1,0 +1,11 @@
+.apply-section {
+  padding: 8rem 0;
+  .inner {
+    max-width: 70.5rem;
+  }
+}
+@media screen and ( max-width: 767px ) {
+  .apply-section {
+    padding: 5rem 0;
+  }
+}

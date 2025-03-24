@@ -1,4 +1,3 @@
-import { StoryblokClient, ISbStoriesParams } from '@storyblok/react';
 import { StoryblokStory } from '@storyblok/react/rsc';
 import { getStoryblokApi } from '@/app/storyblok'; // Remember to import from the local file
 export const revalidate = 60;

@@ -1,0 +1,156 @@
+.what-we-do {
+    background: #210b39;
+    color: #fff;
+    position: relative;
+    padding: 10rem 0;
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    .entry {
+        color: #ffffff;
+        font-size: 1.9rem;
+        line-height: 2.9rem;
+        max-width: 475px;
+        transition: all 0.5s;
+        transform: translate(0%, 100%);
+        p {
+            margin-bottom: 4rem;
+        }
+        
+    }
+    &__inner {
+        overflow: hidden;
+        /*padding-bottom: 210px;*/
+        padding-top: 0;
+        transition: padding-top 0.5s;
+    }
+    &__content {
+        display: flex;
+        align-items: flex-start;
+        margin-top: 50px;
+        position: relative;
+        transition: all 0.5s;
+        overflow: hidden;
+        &.active {
+            &::before {
+                background: rgba(33,11,57,0);
+            }
+            .what-we-do__right {
+                opacity: 1;
+            }
+            .what-we-do__title {
+                font-size: 3.8rem;
+                line-height: 4.8rem;
+            }
+            .what-we-do__labelline {
+                width: 10rem;
+            }
+            .entry {
+                transform: translate(0%, 0%);
+            }
+        }
+        &::before {
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 100%;
+            top: 0; 
+            left: 0;
+            background: rgba(33,11,57,0.7);
+            z-index: 1;
+            transition: background 0.5s;
+        }
+    }
+    &__left {
+        width: 45%;
+        margin-right: 5%;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__label {
+        color: #06e06e;
+        font-size: 1.4rem;
+        line-height: 3.6rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 2rem;
+    }
+    &__info {
+        flex-basis: calc(100% - 15rem);
+    }
+    &__title {
+        font-size: 3.2rem;
+        line-height: 4rem;
+        font-weight: bold;
+        transition: font-size 0.5s, line-height 0.5s;
+    }
+    &__decor {
+        width: 11rem;
+        height: 11rem;
+        background-image: url(../images/agency/story-round.png);
+        background-size: cover;
+        background-position: center center;
+        color: #f3c17d;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.7rem;
+        line-height: 1.8rem;
+        display: flex;
+        flex-direction: column;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+    &__right {
+        width: 50%;
+        position: relative;
+        opacity: 0;
+        transition: opacity 0.5s;
+    }
+    &__labelline {
+        background: #06e06e;
+        width: 0rem;
+        height: 1px;
+        margin-bottom: 2rem;
+        margin-top: 1.5rem;
+        transition: width 0.5s;
+    }
+    .decor-doublesquare {
+        margin-right: 20%;
+        margin-left: auto;
+        &::before {
+            animation: smallrun 20s infinite ease-in-out;
+        }
+        &::after {
+            animation: smallrevercerun 20s infinite ease-in-out;
+        }
+    }
+}
+@media ( max-width: 767px ) {
+    .what-we-do {
+        padding: 0 0 5rem;
+        &__content {
+            flex-direction: column;
+            margin-top: 3rem;
+        }
+        &__left {
+            width: 100%;
+            margin-right: 0;
+            flex-direction: column;
+        }
+        &__right {
+            width: 100%;
+            padding-top: 3rem;
+        }
+        &__info {
+            padding-top: 3rem;
+        }
+        &__labelline {
+            display: none;
+        }
+        &__title {
+            font-size: 3rem;
+            line-height: 4rem;
+        }
+    }
+}

@@ -1,0 +1,252 @@
+.pd-brookfield-title {
+  .inner {
+    display: flex;
+    align-items: center;
+  }
+}
+.pd-animation-section--brookfield {
+  //height: 100vh;
+  position: relative;
+}
+.pd-brookfield-content {
+  opacity: 1;
+  .inner {
+    min-height: 100%;
+    height: auto;
+  }
+  height: auto;
+}
+.pd-brookfield-content,
+.pd-brookfield-screen {
+  position: relative;
+  //top: 0;
+  //left: 0;
+  width: 100%;
+  //transform: translate(0, 100%);
+}
+.pd-brookfield-screen {
+  //transform: translate(0, 100%);
+}
+.pd-brookfield-video {
+  position: relative;
+  //top: 0;
+  //left: 0;
+  width: 100%;
+  z-index: 10;
+  transform: scale(0.35);
+  transform-origin: center top;
+  .inner {
+    position: relative;
+  }
+}
+.pd-brookfield-video__tablet,
+.pd-kbb-video__tablet {
+  width: 33%;
+  padding-bottom: 20%;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(0, 100%);
+  z-index: 10;
+  box-shadow: 23.34px 23.34px 23.34px 0px rgba(0, 0, 0, 0.24), 6.09px 6.09px 6.09px 0px rgba(0, 0, 0, 0.24);
+  //opacity: 0;
+  overflow: hidden;
+  will-change: transform;
+  border-radius: 2.4rem;
+  video {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 2.4rem;
+  }
+}
+.pd-brookfield-content {
+  .h4 {
+    padding-top: 10rem;
+    margin-bottom: 6rem;
+    max-width: 1054px;
+  }
+  &__in {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  &__left {
+    width: 48%;
+    padding-bottom: 6rem;
+  }
+  &__right {
+    width: calc(51% + 6rem);
+    padding-bottom: 44.88%;
+    margin-right: -6rem;
+    position: relative;
+    overflow: hidden;
+    video {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 100%;
+      height: 100%;
+      transform: translate(-50%, -50%);
+      object-fit: cover;
+    }
+  }
+  &__stat {
+    &-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 3rem;
+      &-value {
+        width: 116px;
+        position: relative;
+        text-align: center;
+        font-size: 4.6rem;
+        margin-right: 16px;
+        font-family: $rd;
+        span {
+          font-size: 2.4rem;
+        }
+        div {
+          position: relative;
+          z-index: 2;
+        }
+        &:before {
+          content: '';
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          width: 116px;
+          height: 116px;
+          border-radius: 116px;
+          border: 1px solid $purple-6;
+          background: $purple-2;
+          z-index: 1;
+        }
+      }
+      &-title {
+        font-size: 2.2rem;
+        max-width: calc(100% - 132px);
+      }
+    }
+  }
+}
+
+.pd-brookfield-screen {
+  .inner {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+  }
+  &:before {
+    content: '';
+    width: 52%;
+    padding-bottom: 52%;
+    opacity: 0.3;
+    border-radius: 50%;
+    background: $purple-6;
+    filter: blur(100px);
+    position: absolute;
+    left: 10rem;
+    top: -10rem;
+  }
+  &:after {
+    content: '';
+    width: 35%;
+    padding-bottom: 35%;
+    opacity: 0.3;
+    border-radius: 50%;
+    background: $purple-6;
+    filter: blur(100px);
+    position: absolute;
+    left: 74%;
+    top: 19%;
+  }
+
+}
+.pd-brookfield__img {
+  width: calc(33.33% - 48.75px);
+  margin-right: 65px;
+  &:nth-child(4n + 4){
+    margin-right: 0;
+  }
+}
+.pd-brookfield__img-2,
+.pd-brookfield__img-4 {
+  transform: translate(0, 100%);
+}
+.pd-brookfield__list {
+  display: flex;
+  width: 100%;
+}
+@media screen and ( max-width: 767px ) {
+  .pd-brookfield-title {
+    padding-top: 4.5rem;
+  }
+  .pd-animation-section--brookfield {
+    height: auto;
+  }
+  .pd-brookfield-content,
+  .pd-brookfield-screen {
+    position: relative;
+    transform: translate(0, 0);
+  }
+  .pd-brookfield-video {
+    position: relative;
+    padding: 0;
+    transform-origin: center center;
+  }
+  .pd-brookfield-content {
+    opacity: 1;
+    &__in {
+      flex-direction: column;
+    }
+    &__left {
+      width: 100%;
+      order: 2;
+      padding-bottom: 0;
+    }
+    &__right {
+      width: 112%;
+      margin-left: -6%;
+      margin-right: -6%;
+      padding-bottom: 60%;
+      margin-bottom: 7rem;
+    }
+  }
+  .pd-brookfield-content .h4 {
+    padding-top: 0;
+  }
+  .pd-brookfield-content__stat-item {
+    margin-bottom: 1.6rem;
+    min-height: 72px;
+    &-value {
+      width: 72px;
+      font-size: 2.7rem;
+
+      span {
+        font-size: 1.6rem;
+      }
+
+      &:before {
+        width: 72px;
+        height: 72px;
+      }
+
+    }
+    &-title {
+      font-size: 1.6rem;
+    }
+  }
+  .pd-brookfield__img {
+    margin-right: 1.5rem;
+    width: calc(33.33% - 1.125rem);
+  }
+  .pd-brookfield-title {
+    display: none;
+  }
+}

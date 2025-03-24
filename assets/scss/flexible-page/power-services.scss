@@ -1,0 +1,207 @@
+.power-services {
+  .deco-bottom {
+    position: absolute;
+    right: 12%;
+    top: 34rem;
+    z-index: 9;
+    span {
+      display: block;
+      width: 5.2rem;
+      height: 5.2rem;
+      border-radius: 50%;
+      background: #00e06d;
+      transform: scale(0);
+      transition: transform .5s;
+      transform-origin: 50% 50%;
+    }
+  }
+  .deco-bottom.show {
+    span {
+      transform: scale(1);
+    }
+  }
+  background: #fff url(../images/bg-power-statement.jpg) no-repeat 0 100% / cover;
+  position: relative;
+  padding: 20rem 0 21.2rem;
+  .deco {
+    position: absolute;
+    font-size: 40rem;
+    line-height: normal;
+    left: 50%;
+    top: 50%;
+    transform: translate(-40%,-52%);
+    color: #f3f3f3;
+    letter-spacing: .5rem;
+    font-weight: 900;
+    z-index: 1;
+    white-space: nowrap;
+    text-shadow: 0 0 5.9rem rgba(10,10,10,0.04);
+  }
+  .inner {
+    position: relative;
+    z-index: 10;
+  }
+  h3 {
+    color: #2f0d53;
+    font-size: 5.4rem;
+    line-height: 7rem;
+    font-weight: bold;
+    position: relative;
+    padding-left: 12%;
+    letter-spacing: 1px;
+    word-spacing: .5rem;
+    max-width: 90rem;
+    span {
+      display: inline-block;
+      vertical-align: top;
+      overflow: hidden;
+      position: relative;
+      left: -4px;
+      em {
+        display: block;
+        font-style: normal;
+        transform: translate(0, 100%);
+        transition: transform .4s ease-out 0s;
+      }
+    }
+    &:before {
+      position: absolute;
+      left: 0rem;
+      top: 7.2rem;
+      content: '“';
+      font-family: $rd;
+      font-size: 12rem;
+      line-height: 0;
+      height: 15rem;
+      color: #2ef091;
+      opacity: 0;
+      display: none;
+      transform: translate(0, 4rem);
+      transition: transform .4s ease-out 0s, opacity .4s ease-out 0s;
+    }
+  }
+  h3.animate {
+    span {
+      em {
+        transform: translate(0, 0);
+      }
+    }
+    &:before {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
+  }
+}
+.page-template-flexible-page {
+  .power-services {
+    padding: 12rem 0;
+    &:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      content: '';
+      height: 6rem;
+      background: -moz-linear-gradient(top, rgba(255,255,255,0.65) 0%, rgba(255,255,255,0) 100%);
+      background: linear-gradient(to bottom, rgba(255,255,255,0.65) 0%,rgba(255,255,255,0) 100%);
+    }
+  }
+}
+@media screen and ( max-width: 1400px ) {
+  .power-services {
+    h3 {
+      font-size: 4.5rem;
+      line-height: 5.8rem;
+    }
+  }
+}
+@media screen and ( max-width: 1280px ) {
+  .power-services {
+    h3 {
+      font-size: 4rem;
+    }
+  }
+}
+@media screen and ( max-width: 1150px ) {
+  .power-services {
+    .quotes {
+      top: -103px;
+      left: 19px;
+    }
+    padding: 16rem 0;
+    .deco {
+      font-size: 30rem;
+    }
+  }
+}
+@media screen and ( max-width: 1023px ) {
+  .page-template-flexible-page {
+    .power-services {
+      padding: 9rem 0;
+      .deco {
+        font-size: 20rem;
+      }
+    }
+  }
+  .power-services {
+    h3 {
+      font-size: 3.5rem;
+      line-height: 4.8rem;
+    }
+  }
+}
+@media screen and ( max-width: 767px ) {
+  .power-services {
+    h3 {
+      width: 83%;
+    }
+  }
+}
+@media screen and ( max-width: 640px ) {
+  .power-services {
+    .quotes {
+      top: -78px;
+      left: 9px;
+      transform: scale(.75);
+      transform-origin: 0 0;
+    }
+  }
+}
+@media screen and ( max-width: 480px ) {
+  .power-services {
+    .quotes {
+      top: -61px;
+      transform: scale(.6);
+    }
+    .deco {
+      font-size: 20rem;
+    }
+    padding: 10rem 0;
+    h3 {
+      &::before {
+        font-size: 8rem;
+        top: 5.2rem;
+      }
+    }
+  }
+}
+@media screen and ( max-width: 374px ) {
+  .power-services {
+    h3 {
+      font-size: 3.2rem;
+      line-height: 4rem;
+      &::before {
+        top: 4rem;
+      }
+    }
+  }
+  .quotes {
+    left: -15px;
+    top: -106px;
+  }
+}
+@media screen and ( max-width: 359px ) {
+  .power-services h3 {
+    font-size: 3rem;
+  }
+}

@@ -1,0 +1,101 @@
+
+.cta-service {
+  white-space: normal;
+  width: 1400px;
+  min-width: 100vw;
+  max-width: 100vw;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  .inner {
+    position: relative;
+    .sq-main-1 {
+      top: -110px;
+      left: 25px;
+      right: auto;
+      background: #7c44b0;
+      z-index: 2;
+    }
+    .sq-main-2 {
+      width: 54px;
+      height: 54px;
+      top: -60px;
+      left: 0;
+      right: auto;
+    }
+    .svg-circle-1 {
+      position: absolute;
+      bottom: -86px;
+      left: 63%;
+    }
+
+  }
+
+  .sq-main-3 {
+    top: 48%;
+    left: -100px;
+    background: #7c44b0;
+    right: auto;
+    z-index: 2;
+  }
+  .sq-main-4 {
+    top: calc(48% + 40px);
+    left: -125px;
+    right: auto;
+    width: 54px;
+    height: 54px;
+    opacity: 0.2;
+  }
+  .sq-main-5 {
+    top: auto;
+    bottom: -100px;
+    right: 125px;
+    background: #a142a2;
+  }
+  &__in {
+    text-align: center;
+    position: relative;
+    z-index: 10;
+    .content-entry {
+      max-width: 600px;
+      margin: 0 auto;
+      p {
+        span {
+          opacity: 0;
+          transition: opacity 0.35s;
+        }
+      }
+      &.animate {
+        p {
+          span {
+            opacity: 1;
+          }
+        }
+      }
+      * {
+        color: #fff;
+      }
+    }
+  }
+}
+.geen-circle {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: #06E06E;
+  position: absolute;
+  top: -14rem;
+  left: 59%;
+}
+@media screen and ( max-width: 767px ) {
+  .cta-service {
+    padding: 85px 0 70px;
+    &__in {
+
+    }
+  }
+  .service-title {
+    font-size: 34px;
+    margin-bottom: 20px;
+  }
+}

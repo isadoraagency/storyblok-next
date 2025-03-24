@@ -1,0 +1,62 @@
+.hero-careers {
+  padding: 18rem 0 10rem;
+  background: $purple-2;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 8rem;
+  &__circle {
+    position: absolute;
+    top: 0;
+    left: 40%;
+    transform: translate(0, -50%);
+    &-1 {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      transform: translate(-20%, 20%);
+    }
+    &-2 {
+      position: absolute;
+      left: 65%;
+      top: 0;
+      transform: translate(0, -50%);
+    }
+  }
+  &__dec {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    transform: translate(30%, -70%);
+  }
+  .inner {
+    position: relative;
+    z-index: 10;
+  }
+}
+.page-template-flexible-page {
+  .hero-careers__circle,
+  .hero-careers__circle-1,
+  .hero-careers__dec{
+    display: none;
+  }
+}
+@media screen and ( max-width: 767px ) {
+  .hero-careers {
+    padding: 14rem 0 5rem;
+    margin-bottom: 5rem;
+    &__circle {
+      width: 70px;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      &-2 {
+        width: 80%;
+      }
+      &-1 {
+        bottom: 0;
+        left: 0;
+        width: 80%;
+        transform: translate(-50%, 50%);
+      }
+    }
+  }
+}

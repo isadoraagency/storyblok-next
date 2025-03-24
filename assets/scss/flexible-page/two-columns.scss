@@ -1,0 +1,53 @@
+/* Three column text and images */
+.page-template-flexible-page {
+  .two-columns {
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    .col-50 {
+      width: 48%;
+      margin-bottom: 2rem;
+      .col-image {
+        width: 100%;
+        padding-bottom: 58%;
+        margin-bottom: 3rem;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+      }
+    }
+    &--three {
+      .two-columns__list {
+        justify-content: flex-start;
+        margin: 0 -1.5rem;
+      }
+      .col-50 {
+        width: 33.33%;
+        box-sizing: border-box;
+        padding: 0 1.5rem;
+        .col-image {
+          padding-bottom: 100%;
+        }
+      }
+    }
+  }
+
+}
+@media screen and ( max-width: 1023px ) {
+
+}
+@media screen and ( max-width: 767px ) {
+  .page-template-flexible-page .two-columns .col-50 .col-image {
+    margin-bottom: 2rem;
+  }
+}
+@media screen and ( max-width: 550px ) {
+  .page-template-flexible-page .two-columns__list {
+    display: block;
+  }
+  .page-template-flexible-page .two-columns .col-50 {
+    width: auto;
+  }
+}

@@ -1,0 +1,48 @@
+.ppc-hero {
+  padding: 18rem 0 11rem;
+  position: relative;
+  .inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+  }
+  &__left {
+    width: 53%;
+  }
+  &__right {
+    width: 40%;
+  }
+  &__dec {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translate(-40%, -20%);
+    width: 80%;
+    svg {
+      width: 100%;
+    }
+  }
+  &__agle {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+@media screen and ( max-width: 767px ) {
+  .ppc-hero {
+    padding: 13rem 0 3rem;
+    .inner {
+      display: block;
+    }
+    &__left,
+    &__right {
+      width: auto;
+    }
+    &__dec {
+      width: 140%;
+      max-width: 140%;
+    }
+  }
+}

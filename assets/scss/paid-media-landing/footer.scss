@@ -1,0 +1,71 @@
+.page-template-paid-media-landing-page {
+  #footer {
+    background: #380c59 url(../images/paid-bg.jpg) no-repeat center center / 100% auto;
+    .inner {
+      color: $gold;
+      font-size: 1.4rem;
+    }
+    nav li {
+      &:before {
+        background: $gold;
+      }
+      a {
+        color: $gold;
+      }
+    }
+    .socials li {
+      margin-left: 2.4rem;
+      &.youtube-icon,
+      &.fb-icon,
+      &.twt-icon {
+        display: none;
+
+      }
+      a {
+        color: $gold;
+        font-size: 26px;
+      }
+      &.linkedin-icon {
+        a {
+          width: 26px;
+          height: 26px;
+          border-radius: 30px;
+          background: $gold;
+          color: #420081;
+          display: inline-block;
+          font-size: 1.8rem;
+          position: relative;
+          i {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 640px) {
+  .page-template-paid-media-landing-page {
+    #footer {
+      .inner {
+        text-align: left;
+      }
+      .copyright {
+        text-align: left;
+        margin-bottom: 0;
+      }
+    }
+
+    #footer .socials {
+      padding-top: 1rem;
+      text-align: left;
+      li {
+        margin-left: 0;
+        vertical-align: top;
+        margin-right: 16px;
+      }
+    }
+  }
+}

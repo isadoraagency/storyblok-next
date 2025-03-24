@@ -1,0 +1,56 @@
+.lets-connect {
+    padding: 13rem 0 8rem;
+    color: #310254;
+    text-align: center;
+    position: relative;
+    h3 {
+        font-size: 7.2rem;
+        line-height: normal;
+        font-family: $rd;
+        font-weight: normal;
+        padding-bottom: 2.8rem;
+        letter-spacing: 1px;
+        position: relative;
+        z-index: 1;
+    }
+    .entry {
+        max-width: 500px;
+        margin: 0 auto 4rem;
+    }
+    .decor-donut {
+        position: absolute;
+        left: 18%;
+        top: 50%;
+        animation-delay: 0.5s;
+        animation: slowrun 10s infinite ease-in-out;
+    }
+    .decor-doublesquare {
+        position: absolute;
+        right: 18%;
+        top: 30%;        
+        &::before {
+            animation: run 20s infinite ease-in-out;
+        }
+        &::after {
+            animation: revercerun 20s infinite ease-in-out;
+        }
+    }
+}
+@media ( max-width: 991px ) { 
+    .lets-connect {
+        .decor-doublesquare {
+            top: 3%; 
+        }
+        .decor-donut {
+            display: none;
+        }
+    }
+}
+@media ( max-width: 767px ) { 
+    .lets-connect {
+        padding: 8rem 0 8rem;
+        h3 {
+            font-size: 5.2rem;
+        }
+    }
+}

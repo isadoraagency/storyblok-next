@@ -1,0 +1,63 @@
+.cs-testimonial {
+  &__quote {
+    position: relative;
+    margin-bottom: 3rem;
+    p {
+      font-size: $h5;
+      font-family: $rd;
+      line-height: 1.2; 
+    }
+    &:before {
+      position: absolute;
+      content: '“';
+      font-family: $rd;
+      font-size: $h5;
+      line-height: 0;
+      left: -2rem;
+      top: 2rem;
+      z-index: 3;
+    }
+    &:after {
+      display: inline-block;
+      content: '”';
+      font-family: $rd;
+      font-size: $h5;
+      line-height: 1.5;
+      position: relative;
+      top: 0rem;
+    }
+    p {
+      display: inline;
+    }
+  }
+  &__author {
+    display: flex;
+    align-items: center;
+    .avatar {
+      width: 6rem;
+      border-radius: 50%;
+      margin-right: 1.4rem;
+    }
+    &-info {
+      max-width: calc(100% - 7.4rem);
+      .p4 {
+        line-height: 1;
+      }
+    }
+  } 
+}
+@media screen and ( max-width: 767px ) {
+  .cs-testimonial {
+    &__quote {
+      &:before {
+        left: -1.5rem;
+      }
+      &:after {
+        font-size: $h7;
+      }
+      p {
+        font-size: $h7;
+      }
+    }
+  }
+}

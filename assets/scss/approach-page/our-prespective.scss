@@ -1,0 +1,155 @@
+.our-perspective {
+  padding: 12rem 0 6rem;
+  .slick-dots li button:after {
+    background: $sec-3;
+  }
+  &__item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 10rem 0;
+    &-center {
+      width: 100%;
+    }
+    &-left {
+      width: 48%;
+      video {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+    &-right {
+      width: 48%;
+    }
+    &-order {
+      .our-perspective__item-center {
+        order: 1;
+      }
+      .our-perspective__item-left {
+        order: 3;
+      }
+      .our-perspective__item-right {
+        order: 2;
+      }
+    }
+
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 4rem;
+    &-item {
+      display: flex;
+      width: 47%;
+      box-sizing: border-box;
+      padding: 1rem 0 1rem 2.5rem;
+      min-height: 5.4rem;
+      position: relative;
+      border-bottom: 1px solid $cream-2;
+      align-items: center;
+
+      &:before {
+        content: '';
+        width: 5px;
+        height: 1px;
+        background: $sec-2;
+        position: absolute;
+        left: 5px;
+        top: 50%;
+        transform: translate(0, -50%);
+      }
+    }
+  }
+}
+.our-perspective__item-center {
+
+}
+.approach-testimonial {
+  max-width: 1100px;
+  margin: 5rem auto;
+  padding: 8.5rem 11rem;
+  box-sizing: border-box;
+  .h5 {
+    //text-indent: -2rem;
+  }
+  &__author {
+    display: flex;
+    align-items: center;
+    &-img {
+      width: 5.6rem;
+      height: 5.6rem;
+      border-radius: 50%;
+      margin-right: 1.4rem;
+    }
+    &-text {
+
+      width: calc(100% - 7rem);
+    }
+  }
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    .approach-testimonial__author {
+      width: 48%;
+    }
+    .approach-testimonial__logo {
+      width: 48%;
+      text-align: right;
+    }
+  }
+}
+@media screen and ( max-width: 1023px ) {
+  .our-perspective__item {
+    display: block;
+    margin: 5rem 0;
+    &-left,
+    &-right {
+      width: auto;
+    }
+    &-left {
+      text-align: center;
+      margin-bottom: 3rem;
+      img {
+        max-width: 350px;
+
+      }
+    }
+  }
+
+}
+@media screen and ( max-width: 767px ) {
+  .our-perspective {
+    padding: 6rem 0 1px;
+  }
+  .approach-testimonial {
+    padding: 5rem;
+  }
+  .our-perspective__list {
+    display: block;
+    &-item {
+      min-height: 1px;
+      width: auto;
+    }
+  }
+}
+@media screen and ( max-width: 500px ) {
+  .approach-testimonial {
+    padding: 4rem;
+    &__bottom {
+      display: block;
+      .approach-testimonial__author {
+        width: 100%;
+        margin-bottom: 2rem;
+      }
+      .approach-testimonial__logo {
+        width: 100%;
+        img {
+          max-width: 105px;
+        }
+
+      }
+    }
+  }
+
+}
