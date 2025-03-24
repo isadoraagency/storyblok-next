@@ -4,6 +4,7 @@ import "/assets/scss/main.scss";
 import Footer from "../components/layout/Footer";
 import Header from "../components/layout/Header";
 import { fetchStory } from '@/lib/storyblokApi';
+import {SpeedInsights} from "@vercel/speed-insights/next";
 
 export default async function RootLayout({ children }) {
 
@@ -17,6 +18,7 @@ export default async function RootLayout({ children }) {
           {children}
         </StoryblokProvider>
       <Footer data={dataFooter.data}></Footer>
+      <SpeedInsights />
     </body>
     </html>
   );
