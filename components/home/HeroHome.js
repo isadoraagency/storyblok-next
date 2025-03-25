@@ -145,9 +145,6 @@ export default function HeroHome(){
           <source
             src="https://isadoradev.wpengine.com/wp-content/uploads/2024/04/IA-Website-Homepage-Sizzle-Reel-Animation_V5_1_2.webm"
             type="video/webm"/>
-          <source
-            src="https://isadoradev.wpengine.com/wp-content/uploads/2024/04/IA-Website-Homepage-Sizzle-Reel-Animation_V5_1_2.mp4"
-            type="video/mp4"/>
         </video>
 
       </div>
