@@ -9,11 +9,22 @@ const nextConfig = {
     return config;
   },
   reactStrictMode: true,
-  experimental: {
-    appDir: true,
-  },
   images: {
-    remotePatterns: [{ hostname: 'a-us.storyblok.com' }],
+    domains: ["a-us.storyblok.com"],
+    formats: ["image/avif", "image/webp"],
+  },
+  async headers() {
+    return [
+      {
+        source: "/(.*)",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
+          },
+        ],
+      },
+    ];
   },
 };
 

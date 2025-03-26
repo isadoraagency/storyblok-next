@@ -30,7 +30,7 @@ export default async function WorkHome({blok}){
                           className="ia-works__item wow fadeInLeft"
                           data-wow-delay={`${(i+1)*0.1}s`}>
                       <div className="ia-works__img" >
-                        <div className="visible" style={{backgroundImage: `url(${work.content.image.filename})`}}></div>
+                        <div className="visible" style={{backgroundImage: `url("${work.content.image.filename}/m/filters:format(webp):quality(80)")`}}></div>
                       </div>
                       <h3 className="h4 ia-white ia-margin-1 wow fadeInUpS" data-wow-delay={`${(i+1)*0.1}s`}
                       ><span>{work.name}</span>

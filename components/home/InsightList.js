@@ -38,8 +38,7 @@ export default  function InsightList({title, list}){
                   </svg>
                 </a>
                 {
-                  (item.content.featured_image?.filename && i > 0) && <div className="ia-insight__img"
-                                                                           style={{backgroundImage: `url(${item.content.featured_image?.filename})`}}></div>
+                  (item.content.featured_image?.filename && i > 0) && <div className="ia-insight__img" style={{backgroundImage: `url("${item.content.featured_image?.filename}/m/filters:format(webp):quality(80)")`}}></div>
                 }
                 <h3 className={i==0 ? ('h3') : ('h7')}>{item.content.title}</h3>
                 {

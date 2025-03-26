@@ -72,7 +72,7 @@ export default function WhatWeDo({blok}){
               </div>
               {
                 blok.addition_image?.filename && <div className="ia-what__info-right">
-                  <img alt="instagram video" src={blok.addition_image?.filename}/>
+                  <img alt="instagram video" src={`${blok.addition_image?.filename}/m/filters:format(webp):quality(80)`} />
                 </div>
               }
             </div>

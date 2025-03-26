@@ -10,6 +10,7 @@ export default async function RootLayout({ children }) {
 
   const dataHeader = await fetchStory("settings/header");
   const dataFooter = await fetchStory("settings/footer");
+
   return (
     <html lang="en">
     <body>
