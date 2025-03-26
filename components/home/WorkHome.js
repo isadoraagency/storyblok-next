@@ -23,7 +23,6 @@ export default async function WorkHome({blok}){
           <div className="ia-works__list">
             {
               works.map((work, i) => {
-                console.log(work)
                 return (
                   <Fragment key={work.uuid}>
                     <Link href={work.full_slug}
