@@ -5,7 +5,7 @@ import Footer from "../components/layout/Footer";
 import Header from "../components/layout/Header";
 import { fetchStory } from '@/lib/storyblokApi';
 import {SpeedInsights} from "@vercel/speed-insights/next";
-import Script from "next/script";
+// import Script from "next/script";
 
 
 export default async function RootLayout({ children }) {
@@ -17,30 +17,30 @@ export default async function RootLayout({ children }) {
     <html lang="en">
       <head>
         {/* Google Tag Manager (GTM) */}
-        <Script
-          id="google-tag-manager"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-              new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-              j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-              'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-              })(window,document,'script','dataLayer','GTM-N9KBFQX');
-            `,
-          }}
-        />
+        {/*<Script*/}
+        {/*  id="google-tag-manager"*/}
+        {/*  strategy="afterInteractive"*/}
+        {/*  dangerouslySetInnerHTML={{*/}
+        {/*    __html: `*/}
+        {/*      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':*/}
+        {/*      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],*/}
+        {/*      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=*/}
+        {/*      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);*/}
+        {/*      })(window,document,'script','dataLayer','GTM-N9KBFQX');*/}
+        {/*    `,*/}
+        {/*  }}*/}
+        {/*/>*/}
       </head>
       <body>
       {/* Google Tag Manager (noscript) */}
-      <noscript>
-        <iframe
-          src="https://www.googletagmanager.com/ns.html?id=GTM-N9KBFQX"
-          height="0"
-          width="0"
-          style={{ display: "none", visibility: "hidden" }}
-        ></iframe>
-      </noscript>
+      {/*<noscript>*/}
+      {/*  <iframe*/}
+      {/*    src="https://www.googletagmanager.com/ns.html?id=GTM-N9KBFQX"*/}
+      {/*    height="0"*/}
+      {/*    width="0"*/}
+      {/*    style={{ display: "none", visibility: "hidden" }}*/}
+      {/*  ></iframe>*/}
+      {/*</noscript>*/}
 
       <Header data={dataHeader.data}></Header>
       <StoryblokProvider>

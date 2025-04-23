@@ -2,7 +2,7 @@ import {storyblokEditable} from "@storyblok/react";
 
 const InputField = ({ blok }) => {
   return (
-    <div {...storyblokEditable(blok)}>
+    <div className="field-row" {...storyblokEditable(blok)}>
       <label>{blok.label}</label>
       <input
         type={blok.type}

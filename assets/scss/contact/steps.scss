@@ -1,3 +1,4 @@
+@import "../global/global";
 .page-template-contact-2024-page,
 .page-template-thanks-page {
   background: $purple-2;
@@ -217,7 +218,7 @@
             background: $purple-2;
             color: $white;
             border: 1px solid $purple-2;
-          } 
+          }
         }
         &-label {
           border-radius: 6rem;
@@ -245,7 +246,7 @@
     }
   }
   &--right {
-    text-align: right; 
+    text-align: right;
   }
 
   div.fancy-select {
@@ -371,7 +372,7 @@
     height: 6rem !important;
     transition: height .5s;
     display: block;
-    border-radius: 0; 
+    border-radius: 0;
     &:focus {
       height: 23.5rem !important;
     }
@@ -431,12 +432,12 @@
       .contact-step-tab-circle:hover:after {
         background: #f1d7b6;
       }
-      + .contact-step-tab-3:not("active"):hover {
-        cursor: pointer;
-        .contact-step-tab-circle:hover:after {
-          background: #f1d7b6;
-        }
-      }
+      //+ .contact-step-tab-3:not("active"):hover {
+      //  cursor: pointer;
+      //  .contact-step-tab-circle:hover:after {
+      //    background: #f1d7b6;
+      //  }
+      //}
     }
     &:first-child {
       margin-left: 0;
@@ -618,7 +619,7 @@
   color: #1d0239;
 }
 .badget-list li input:checked + label:after {
-  background-image: url(../../images/sprite.png);
+  //background-image: url(../../images/sprite.png);
   background-position: -164px 0;
   background-repeat: no-repeat;
 
@@ -791,7 +792,7 @@
           top: -1px;
           right: -1px;
           bottom: -1px;
-          background: url(../images/sun.png) no-repeat 0 0 / cover;
+          //background: url(../images/sun.png) no-repeat 0 0 / cover;
         }
         #over-area {
           //transform: rotate(1deg);
@@ -1459,7 +1460,7 @@
 
 
 
-@media screen and ( min-width: 767px ) and ( orientation: portrait ) { 
+@media screen and ( min-width: 767px ) and ( orientation: portrait ) {
   .field-row-file .file-field {
     line-height: 3rem;
     padding-top: 1rem;
@@ -1467,7 +1468,7 @@
     em i {
       display: inline-block;
     }
-  }   
+  }
   .contacts-steps .contact-step .badget-list > li div span em {
     color: transparent;
   }

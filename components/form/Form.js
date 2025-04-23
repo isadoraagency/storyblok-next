@@ -1,20 +1,20 @@
-import {StoryblokComponent, storyblokEditable} from '@storyblok/react';
-
+import {storyblokEditable, StoryblokServerComponent} from "@storyblok/react/rsc";
+ import "@/assets/scss/contact/steps.scss";
 const Form = ({ blok }) => {
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const formData = new FormData(e.target);
-    fetch(blok.action_url, { method: 'POST', body: formData })
-      .then(() => alert('Thank you!'))
-      .catch((error) => alert(`Error: ${error.message}`));
-  };
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   const formData = new FormData(e.target);
+  //   fetch(blok.action_url, { method: 'POST', body: formData })
+  //     .then(() => alert('Thank you!'))
+  //     .catch((error) => alert(`Error: ${error.message}`));
+  // };
 
   return (
-    <div className="ia-container">
-      <form onSubmit={handleSubmit} {...storyblokEditable(blok)}>
+    <div className="inner">
+      <form  {...storyblokEditable(blok)}>
 
         {blok.fields.map((field) => (
-          <StoryblokComponent blok={field} key={field._uid}/>
+          <StoryblokServerComponent blok={field} key={field._uid}/>
         ))}
         <button className="ia-btn ia-btn--primary ia-btn--md" type="submit">{blok.submit_text || 'Submit'}</button>
       </form>
